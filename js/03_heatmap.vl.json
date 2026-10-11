@@ -1,0 +1,208 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Each offence subdivision's crime rate compared with 2017 (2017 = 100).",
+  "data": {
+    "url": "data/subdivision_year.csv"
+  },
+  "transform": [
+    {
+      "calculate": "datum.year == 2026 ? datum.incidents : 0",
+      "as": "inc26"
+    },
+    {
+      "calculate": "datum.year == 2026 ? datum.index : 0",
+      "as": "idx26"
+    },
+    {
+      "joinaggregate": [
+        {
+          "op": "sum",
+          "field": "inc26",
+          "as": "incidents_2026"
+        },
+        {
+          "op": "sum",
+          "field": "idx26",
+          "as": "index_2026"
+        }
+      ],
+      "groupby": [
+        "subdivision"
+      ]
+    },
+    {
+      "filter": "datum.incidents_2026 >= 1000"
+    }
+  ],
+  "width": "container",
+  "height": {
+    "step": 24
+  },
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "ordinal",
+      "title": "Year ending June",
+      "axis": {
+        "labelAngle": 0,
+        "orient": "top",
+        "domain": false,
+        "ticks": false
+      }
+    },
+    "y": {
+      "field": "subdivision",
+      "type": "nominal",
+      "title": null,
+      "sort": {
+        "field": "index_2026",
+        "order": "descending"
+      },
+      "axis": {
+        "domain": false,
+        "ticks": false,
+        "labelLimit": 300,
+        "labelFontSize": 12.5
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rect",
+        "stroke": "#ffffff",
+        "strokeWidth": 2,
+        "cornerRadius": 2
+      },
+      "encoding": {
+        "color": {
+          "field": "index",
+          "type": "quantitative",
+          "title": [
+            "Compared with 2017",
+            "(2017 = 100)"
+          ],
+          "scale": {
+            "domain": [
+              50,
+              100,
+              160
+            ],
+            "range": [
+              "#2c5a8c",
+              "#f4f1ea",
+              "#b3261e"
+            ],
+            "clamp": true
+          },
+          "legend": {
+            "orient": "bottom",
+            "gradientLength": 260,
+            "direction": "horizontal",
+            "values": [
+              50,
+              75,
+              100,
+              130,
+              160
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "subdivision",
+            "title": "Offence"
+          },
+          {
+            "field": "year",
+            "title": "Year ending June"
+          },
+          {
+            "field": "incidents",
+            "title": "Incidents",
+            "format": ","
+          },
+          {
+            "field": "index",
+            "title": "Compared with 2017 (=100)",
+            "format": ".0f"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.year == 2026"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "fontWeight": 700
+      },
+      "encoding": {
+        "text": {
+          "field": "index",
+          "format": ".0f"
+        },
+        "color": {
+          "condition": {
+            "test": "datum.index > 135 || datum.index < 65",
+            "value": "#ffffff"
+          },
+          "value": "#1d2433"
+        }
+      }
+    }
+  ],
+  "config": {
+    "font": "Archivo",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Archivo",
+      "titleFont": "Archivo",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": 600,
+      "labelColor": "#545c6b",
+      "titleColor": "#545c6b",
+      "domainColor": "#c9c4b8",
+      "tickColor": "#c9c4b8",
+      "gridColor": "#ece8df"
+    },
+    "axisQuantitative": {
+      "format": ",.0f"
+    },
+    "legend": {
+      "labelFont": "Archivo",
+      "titleFont": "Archivo",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": 600,
+      "labelColor": "#545c6b",
+      "titleColor": "#1d2433"
+    },
+    "header": {
+      "labelFont": "Archivo",
+      "titleFont": "Archivo",
+      "labelFontSize": 13,
+      "labelFontWeight": 600,
+      "labelColor": "#1d2433"
+    },
+    "text": {
+      "font": "Archivo",
+      "fontSize": 12,
+      "color": "#1d2433"
+    },
+    "title": {
+      "font": "Archivo",
+      "fontSize": 14,
+      "fontWeight": 700,
+      "color": "#1d2433",
+      "anchor": "start"
+    }
+  }
+}

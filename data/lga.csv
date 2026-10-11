@@ -1,0 +1,80 @@
+lga,region,incidents,rate,rate_2017,change_pct,unsolved_pct,code,population,irsd_score,irsd_decile_vic,disadvantage,crime_t,disadv_t,bivar,metro
+Banyule,North West Metro,7510,5635.35,5799.78,-2.84,49.67,20660,126236.0,1057.68,9.0,Least disadvantaged,2,1,2-1,True
+Brimbank,North West Metro,14686,7382.83,6749.11,9.39,60.21,21180,194618.0,912.47,1.0,Most disadvantaged,3,3,3-3,True
+Darebin,North West Metro,12704,7808.27,8115.0,-3.78,59.8,21890,148570.0,1018.34,7.0,Less disadvantaged,3,2,3-2,True
+Hobsons Bay,North West Metro,6152,6289.71,5418.7,16.07,63.59,23110,91322.0,1020.66,7.0,Less disadvantaged,2,2,2-2,True
+Hume,North West Metro,17964,6194.35,7487.66,-17.27,57.24,23270,243901.0,940.82,1.0,Most disadvantaged,2,3,2-3,True
+Maribyrnong,North West Metro,9913,10344.17,7706.54,34.23,67.85,24330,85209.0,1009.72,6.0,Middle,3,2,3-2,True
+Melbourne,North West Metro,33128,16944.41,17394.01,-2.58,62.58,24600,149615.0,1016.68,7.0,Less disadvantaged,3,2,3-2,True
+Melton,North West Metro,12881,4907.36,5748.73,-14.64,61.02,24650,178960.0,985.19,4.0,More disadvantaged,2,2,2-2,True
+Merri-bek,North West Metro,11239,5946.9,6537.03,-9.03,65.59,25250,171357.0,1026.53,7.0,Less disadvantaged,2,1,2-1,True
+Moonee Valley,North West Metro,7822,5991.41,5974.05,0.29,64.52,25060,121851.0,1040.72,8.0,Less disadvantaged,2,1,2-1,True
+Nillumbik,North West Metro,1697,2654.89,3353.31,-20.83,52.62,25710,62895.0,1092.87,10.0,Least disadvantaged,1,1,1-1,True
+Whittlesea,North West Metro,13286,4935.68,5667.22,-12.91,54.62,27070,229396.0,989.6,4.0,More disadvantaged,2,2,2-2,True
+Wyndham,North West Metro,18714,5126.77,4730.66,8.37,62.97,27260,292011.0,1005.52,6.0,Middle,2,2,2-2,True
+Yarra,North West Metro,12841,12593.62,11729.79,7.36,66.51,27350,90114.0,1045.74,9.0,Least disadvantaged,3,1,3-1,True
+Alpine,Eastern,355,2674.91,2206.98,21.2,45.35,20110,13235.0,1027.61,7.0,Less disadvantaged,1,1,1-1,False
+Bass Coast,Eastern,2366,5245.6,5899.62,-11.09,35.8,20740,40789.0,992.83,5.0,Middle,2,2,2-2,False
+Baw Baw,Eastern,3795,5924.4,5563.74,6.48,44.58,20830,57626.0,1003.32,6.0,Middle,2,2,2-2,False
+Benalla,Eastern,1116,7569.8,6996.94,8.19,36.02,21010,14528.0,968.45,3.0,More disadvantaged,3,3,3-3,False
+Boroondara,Eastern,8009,4482.76,3815.28,17.49,67.24,21110,167900.0,1089.62,10.0,Least disadvantaged,1,1,1-1,True
+East Gippsland,Eastern,4665,9292.3,6296.11,47.59,31.28,22110,48715.0,963.31,3.0,More disadvantaged,3,3,3-3,False
+Greater Shepparton,Eastern,7380,10501.02,9335.15,12.49,43.28,22830,68409.0,944.04,2.0,Most disadvantaged,3,3,3-3,False
+Indigo,Eastern,458,2558.51,2233.07,14.57,46.72,23350,17368.0,1029.42,8.0,Less disadvantaged,1,1,1-1,False
+Knox,Eastern,8030,4894.24,5656.09,-13.47,54.07,23670,159103.0,1042.17,9.0,Least disadvantaged,2,1,2-1,True
+Latrobe,Eastern,10304,12912.75,13272.43,-2.71,39.56,23810,77318.0,930.82,1.0,Most disadvantaged,3,3,3-3,False
+Manningham,Eastern,4168,3134.18,3243.48,-3.37,62.36,24210,124700.0,1056.08,9.0,Least disadvantaged,1,1,1-1,True
+Mansfield,Eastern,289,2605.6,5687.31,-54.19,46.02,24250,10178.0,1027.62,8.0,Less disadvantaged,1,1,1-1,False
+Maroondah,Eastern,6872,5699.06,5845.66,-2.51,44.0,24410,115043.0,1041.03,8.0,Less disadvantaged,2,1,2-1,True
+Mitchell,Eastern,3881,6073.12,6957.83,-12.72,39.6,24850,49460.0,999.55,5.0,Middle,2,2,2-2,False
+Moira,Eastern,1861,5980.43,4946.66,20.9,39.66,24900,30522.0,958.26,2.0,Most disadvantaged,2,3,2-3,False
+Monash,Eastern,11748,5532.26,4575.65,20.91,65.77,24970,190397.0,1042.31,9.0,Least disadvantaged,2,1,2-1,True
+Murrindindi,Eastern,608,3822.13,3596.92,6.26,50.66,25620,15197.0,1004.69,6.0,Middle,1,2,1-2,False
+South Gippsland,Eastern,1574,5029.17,3984.88,26.21,41.3,26170,30577.0,1002.59,5.0,Middle,2,2,2-2,False
+Strathbogie,Eastern,444,3710.23,4329.66,-14.31,50.45,26430,11455.0,981.99,4.0,More disadvantaged,1,3,1-3,False
+Towong,Eastern,191,3077.14,2852.9,7.86,47.12,26670,6223.0,1000.77,5.0,Middle,1,2,1-2,False
+Wangaratta,Eastern,1992,6604.54,6452.28,2.36,35.49,26700,29808.0,988.35,4.0,More disadvantaged,2,2,2-2,False
+Wellington,Eastern,4075,8708.31,7024.98,23.96,36.59,26810,45639.0,972.97,3.0,More disadvantaged,3,3,3-3,False
+Whitehorse,Eastern,8761,4715.08,3971.55,18.72,63.3,26980,169346.0,1042.7,9.0,Least disadvantaged,1,1,1-1,True
+Wodonga,Eastern,3282,7253.4,6153.73,17.87,48.81,27170,43253.0,973.07,3.0,More disadvantaged,3,3,3-3,False
+Yarra Ranges,Eastern,5788,3586.62,3922.24,-8.56,45.21,27450,156068.0,1041.25,8.0,Less disadvantaged,1,1,1-1,True
+Bayside,Southern Metro,3907,3629.32,3848.94,-5.71,64.29,20910,101306.0,1090.41,10.0,Least disadvantaged,1,1,1-1,True
+Cardinia,Southern Metro,6566,4806.59,4894.48,-1.8,53.73,21450,118194.0,1020.96,7.0,Less disadvantaged,1,1,1-1,True
+Casey,Southern Metro,23311,5408.05,5302.11,2.0,58.36,21610,365239.0,994.67,5.0,Middle,2,2,2-2,True
+Frankston,Southern Metro,12241,8422.23,8462.96,-0.48,43.4,22170,139281.0,1003.14,6.0,Middle,3,2,3-2,True
+Glen Eira,Southern Metro,6061,3708.64,3843.35,-3.5,65.96,22310,148908.0,1074.59,10.0,Least disadvantaged,1,1,1-1,True
+Greater Dandenong,Southern Metro,16652,9888.92,9110.38,8.55,55.54,22670,158208.0,886.66,1.0,Most disadvantaged,3,3,3-3,True
+Kingston,Southern Metro,9129,5427.04,5183.59,4.7,54.19,23430,158129.0,1044.26,9.0,Least disadvantaged,2,1,2-1,True
+Mornington Peninsula,Southern Metro,8243,4778.59,5442.54,-12.2,48.28,25340,168948.0,1037.54,8.0,Less disadvantaged,1,1,1-1,True
+Port Phillip,Southern Metro,12617,10984.33,9441.85,16.34,65.56,25900,101942.0,1061.02,9.0,Least disadvantaged,3,1,3-1,True
+Stonnington,Southern Metro,10525,9103.64,7694.37,18.32,67.69,26350,104703.0,1084.48,10.0,Least disadvantaged,3,1,3-1,True
+Ararat,Western,1135,9602.72,8019.67,19.74,35.86,20260,11880.0,955.21,2.0,Most disadvantaged,3,3,3-3,False
+Ballarat,Western,11783,9401.4,8789.12,6.97,60.17,20570,113763.0,985.71,4.0,More disadvantaged,3,2,3-2,False
+Buloke,Western,285,4872.64,2202.22,121.26,61.75,21270,6178.0,975.05,3.0,More disadvantaged,1,3,1-3,False
+Campaspe,Western,2888,7619.35,7090.13,7.46,37.36,21370,38735.0,964.87,3.0,More disadvantaged,3,3,3-3,False
+Central Goldfields,Western,985,7145.46,6575.76,8.66,31.07,21670,13483.0,897.56,1.0,Most disadvantaged,3,3,3-3,False
+Colac-Otway,Western,1412,6361.68,7492.48,-15.09,33.36,21750,22423.0,972.59,3.0,More disadvantaged,2,3,2-3,False
+Corangamite,Western,688,4392.73,4994.16,-12.04,40.41,21830,16115.0,984.59,4.0,More disadvantaged,1,3,1-3,False
+Gannawarra,Western,507,4922.86,5008.49,-1.71,40.24,22250,10683.0,952.41,2.0,Most disadvantaged,2,3,2-3,False
+Glenelg,Western,1642,8235.62,6817.49,20.8,32.76,22410,20152.0,952.3,2.0,Most disadvantaged,3,3,3-3,False
+Golden Plains,Western,663,2458.63,2485.3,-1.07,56.11,22490,24985.0,1039.94,8.0,Less disadvantaged,1,1,1-1,False
+Greater Bendigo,Western,8598,6720.6,6881.37,-2.34,39.08,22620,121470.0,984.96,4.0,More disadvantaged,3,2,3-2,False
+Greater Geelong,Western,18893,6276.54,7235.45,-13.25,45.97,22750,271057.0,1007.33,6.0,Middle,2,2,2-2,False
+Hepburn,Western,637,3703.81,4360.84,-15.07,58.71,22910,16604.0,1006.25,6.0,Middle,1,2,1-2,False
+Hindmarsh,Western,263,4783.13,4993.02,-4.2,42.59,22980,5698.0,940.1,1.0,Most disadvantaged,1,3,1-3,False
+Horsham,Western,1824,8997.61,8509.79,5.73,30.26,23190,20429.0,990.1,4.0,More disadvantaged,3,2,3-2,False
+Loddon,Western,397,5123.42,4610.91,11.12,49.62,23940,7759.0,948.1,2.0,Most disadvantaged,2,3,2-3,False
+Macedon Ranges,Western,2027,3676.89,3496.85,5.15,45.49,24130,51458.0,1062.81,10.0,Least disadvantaged,1,1,1-1,False
+Mildura,Western,6434,11153.18,9286.89,20.1,41.92,24780,56972.0,940.0,1.0,Most disadvantaged,3,3,3-3,False
+Moorabool,Western,2380,5791.58,5945.56,-2.59,49.79,25150,37632.0,1017.23,7.0,Less disadvantaged,2,2,2-2,False
+Mount Alexander,Western,944,4453.11,4544.75,-2.02,40.57,25430,20253.0,1007.45,6.0,Middle,1,2,1-2,False
+Moyne,Western,487,2733.2,3140.83,-12.98,39.63,25490,17374.0,1028.98,8.0,Less disadvantaged,1,1,1-1,False
+Northern Grampians,Western,1313,11048.59,7988.96,38.3,36.94,25810,11948.0,951.3,2.0,Most disadvantaged,3,3,3-3,False
+Pyrenees,Western,378,4769.01,4914.68,-2.96,53.44,25990,7671.0,958.69,3.0,More disadvantaged,1,3,1-3,False
+Queenscliffe,Western,49,1324.36,4584.33,-71.11,57.14,26080,3276.0,1082.24,10.0,Least disadvantaged,1,1,1-1,False
+Southern Grampians,Western,989,6000.56,6275.07,-4.37,24.27,26260,16588.0,993.73,5.0,Middle,2,2,2-2,False
+Surf Coast,Western,1038,2547.11,3574.71,-28.75,48.07,26490,37694.0,1086.2,10.0,Least disadvantaged,1,1,1-1,False
+Swan Hill,Western,1595,7605.22,8396.22,-9.42,32.73,26610,21403.0,940.62,1.0,Most disadvantaged,3,3,3-3,False
+Warrnambool,Western,2527,6891.59,7865.01,-12.38,27.58,26730,35406.0,994.95,5.0,Middle,3,2,3-2,False
+West Wimmera,Western,186,4829.53,3390.69,42.44,45.16,26890,4006.0,991.01,5.0,Middle,1,2,1-2,False
+Yarriambiack,Western,352,5584.58,5172.93,7.96,42.33,27630,6556.0,945.93,2.0,Most disadvantaged,2,3,2-3,False

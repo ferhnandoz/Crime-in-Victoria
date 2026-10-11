@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Crime in Victoria: Behind the Numbers</title>
+  <meta name="description" content="A data story about recorded crime in Victoria, 2017 to 2026, by offence type, council and disadvantage.">
+  <meta name="author" content="Farhan Abdulla">
+
+  <!-- Typefaces: Archivo (condensed headings and chart labels) + Source Serif 4 (reading text) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Vega, Vega-Lite and Vega-Embed -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <div class="wrap">
+    <p class="kicker">Victoria · Recorded crime · 2017 to 2026</p>
+    <h1>Crime in Victoria: behind the numbers</h1>
+    <p class="dek">After falling during the pandemic, recorded crime in Victoria hit a ten-year high in 2025.
+      But "crime" is not one thing. This story looks at <strong style="color:#fff">what</strong> is rising,
+      <strong style="color:#fff">where</strong> it happens, and <strong style="color:#fff">who</strong> is most affected.</p>
+    <p class="byline">By Farhan Abdulla · Published 12 October 2026 · Data: Crime Statistics Agency Victoria (year ending June 2026) and ABS SEIFA 2021</p>
+  </div>
+  <div class="stats">
+    <div class="stat"><span class="num">468,070</span><span class="lbl">criminal incidents recorded in the year to June 2026</span></div>
+    <div class="stat"><span class="num">6,504</span><span class="lbl">incidents for every 100,000 Victorians</span></div>
+    <div class="stat"><span class="num">41%</span><span class="lbl">of all incidents were thefts</span></div>
+    <div class="stat"><span class="num">45%</span><span class="lbl">of crimes against the person were related to family violence</span></div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Sections">
+  <ol>
+    <li><a href="#trend"><span>01</span>The big picture</a></li>
+    <li><a href="#what"><span>02</span>What kind of crime</a></li>
+    <li><a href="#where"><span>03</span>Where it happens</a></li>
+    <li><a href="#who"><span>04</span>Crime and disadvantage</a></li>
+    <li><a href="#solved"><span>05</span>Solved or not?</a></li>
+  </ol>
+</nav>
+
+<main>
+
+<!-- ================= 01 TREND ================= -->
+<section id="trend">
+  <div class="section-head">
+    <span class="num">01 · The big picture</span>
+    <h2>Down in the pandemic, up to a ten-year high</h2>
+    <p>Victoria Police recorded about <strong>405,000</strong> criminal incidents in the year to June 2017.
+      Numbers dipped during the COVID-19 lockdowns, when people stayed home and shops closed, then climbed
+      to a decade high of <strong>482,134</strong> in 2025. The latest year eased slightly, down <strong>3%</strong>.</p>
+  </div>
+
+  <div class="explainer">
+    <b>What is a "criminal incident"?</b> One event reported to or detected by police, which may involve
+    several offences. <b>"Per 100,000 people"</b> divides the count by the population, so places and years
+    with different populations can be compared fairly.
+  </div>
+
+  <div class="row two">
+    <div class="panel">
+      <h3>Criminal incidents recorded each year</h3>
+      <p class="sub">Victoria, years ending 30 June. Hover over points for exact values.</p>
+      <div id="vis1" class="vis"></div>
+      <p class="note">Source: Crime Statistics Agency, Data Tables Criminal Incidents, year ending June 2026.</p>
+    </div>
+    <div class="panel">
+      <h3>Which types of crime changed?</h3>
+      <p class="sub">Incidents per 100,000 people, 2017 vs 2026.</p>
+      <div id="vis2" class="vis"></div>
+      <p class="note">The vertical scale is stretched so that equal slopes mean equal percentage change.
+        "Other offences" (under 15 per 100,000) is not shown.</p>
+    </div>
+  </div>
+
+  <p class="takeaway">Population has grown, so per person the 2026 rate is almost the same as in 2017 (+1%).
+    The mix of crime is what has shifted.</p>
+</section>
+
+<!-- ================= 02 WHAT ================= -->
+<section id="what">
+  <div class="section-head">
+    <span class="num">02 · What kind of crime</span>
+    <h2>Shoplifting and car theft surge, burglary falls</h2>
+    <p>The grid below compares each type of offence with its own 2017 level. <strong>Red</strong> means more
+      crime per person than in 2017, <strong>blue</strong> means less. Sexual offences, stalking and breaches
+      of court orders have climbed steadily, while home burglary and disorderly conduct have fallen sharply.</p>
+  </div>
+
+  <div class="row one">
+    <div class="panel">
+      <h3>Every offence type compared with 2017</h3>
+      <p class="sub">Rate per person, where 2017 = 100. A value of 124 means 24% more than in 2017. Only offence types with at least 1,000 incidents in 2026 are shown, sorted by their 2026 value.</p>
+      <div id="vis3" class="vis"></div>
+      <p class="note">Source: Crime Statistics Agency, state Table 01 (offence subdivision).</p>
+    </div>
+  </div>
+
+  <div class="row wide-left">
+    <div class="panel">
+      <h3>The ten most common offences: how their rank changed</h3>
+      <p class="sub">Rank by number of incidents (1 = most common).</p>
+      <div id="vis4" class="vis"></div>
+      <p class="note">Source: Crime Statistics Agency, state Table 01 (offence subgroup).</p>
+    </div>
+    <div class="text-panel">
+      <h3>Reading the rankings</h3>
+      <p><span class="hl">Shoplifting</span> (steal from a retail store) dropped to 10th when stores closed in
+        2021, then shot up to 4th. Incidents rose <strong>78%</strong> since 2017.</p>
+      <p><strong style="color:#c07a1d">Motor vehicle theft</strong> rose <strong>40%</strong>, climbing from
+        12th to 6th place since 2021.</p>
+      <p><strong style="color:#1f3a5f">Home burglary</strong> without violence went the other way: down
+        <strong>41%</strong>, from 4th to 8th.</p>
+      <p>Theft from cars has stayed the most common offence every single year.</p>
+    </div>
+  </div>
+
+  <div class="row one">
+    <div class="panel">
+      <h3>Nearly half of violent and justice offences involve family violence</h3>
+      <p class="sub">Each square is 1% of incidents in the year to June 2026. Red squares are incidents police flagged as family-violence related.</p>
+      <div id="vis5" class="vis"></div>
+      <p class="note">"Justice procedures" includes breaching intervention orders, a common outcome of family violence. Source: Crime Statistics Agency, state Table 03.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 03 WHERE ================= -->
+<section id="where">
+  <div class="section-head">
+    <span class="num">03 · Where it happens</span>
+    <h2>Regional cities have some of the highest rates</h2>
+    <p>Victoria has 79 local councils. Apart from inner Melbourne, many of the highest crime rates are in
+      regional centres such as <strong>Latrobe</strong> (Morwell, Traralgon), <strong>Mildura</strong> and
+      <strong>Greater Shepparton</strong>. <strong>Click any council</strong> to see how its rate has changed over ten years.</p>
+  </div>
+
+  <div class="row one">
+    <div class="panel">
+      <h3>Crime rate by council, year to June 2026</h3>
+      <p class="sub">Incidents per 100,000 residents. Darker = higher rate. Click a council on either map to update the trend line (grey lines are all other councils).</p>
+      <div id="vis6" class="vis"></div>
+      <p class="note">Council boundaries built from Victorian suburb boundaries, grouped using the Crime Statistics Agency suburb table. Equal-area map projection. Source: Crime Statistics Agency, LGA Table 01.</p>
+    </div>
+  </div>
+
+  <div class="row one">
+    <div class="panel">
+      <h3>Rates can mislead: where the most incidents happen</h3>
+      <p class="sub">Circle size = number of incidents. Colour = change in rate since 2017 (red up, blue down).</p>
+      <div id="vis7" class="vis"></div>
+      <p class="note">Big outer-suburban councils like <strong>Casey</strong> and <strong>Wyndham</strong> have average rates but record many incidents because of their large populations. 40 of 79 councils have a higher rate than in 2017.</p>
+    </div>
+  </div>
+
+  <div class="row one">
+    <div class="panel">
+      <h3>Different crimes, different places</h3>
+      <p class="sub">Each map ranks the 79 councils for one type of crime and splits them into five equal groups.</p>
+      <div id="vis8" class="vis"></div>
+      <p class="note">Drug and public order offences are often highest in the far west and east of the state, while property crime is highest in large regional cities and inner Melbourne. Source: Crime Statistics Agency, LGA Table 02.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 04 WHO ================= -->
+<section id="who">
+  <div class="section-head">
+    <span class="num">04 · Crime and disadvantage</span>
+    <h2>Crime is higher where people have less</h2>
+    <p>The Australian Bureau of Statistics scores every council on <strong>socio-economic disadvantage</strong>,
+      using things like income, unemployment and education (the SEIFA index). Lower scores mean more disadvantage.
+      Combining this with crime data shows a clear pattern.</p>
+  </div>
+
+  <div class="row one">
+    <div class="panel">
+      <h3>Two maps in one: crime rate and disadvantage</h3>
+      <p class="sub">Councils are split into thirds on each measure. <strong style="color:#574249">Dark purple</strong> = high crime and high disadvantage; <strong style="color:#c85a5a">red</strong> = high crime, low disadvantage; <strong style="color:#64acbe">blue</strong> = high disadvantage, low crime.</p>
+      <div id="vis9" class="vis"></div>
+      <p class="note">15 councils are in the highest third for both. Numbers in the key show how many councils fall in each group. Sources: Crime Statistics Agency (2026); ABS SEIFA 2021, Index of Relative Socio-economic Disadvantage.</p>
+    </div>
+  </div>
+
+  <div class="row one">
+    <div class="panel">
+      <h3>Every council, plotted</h3>
+      <p class="sub">Further right = more disadvantaged. Hover to highlight a council.</p>
+      <div id="vis10" class="vis"></div>
+      <p class="note">The dashed line shows the overall trend: as disadvantage rises, so does crime. Melbourne, Yarra and Port Phillip break the pattern because of their large numbers of visitors.</p>
+    </div>
+  </div>
+
+  <div class="row one">
+    <div class="panel">
+      <h3>Typical crime rate in each disadvantage group</h3>
+      <p class="sub">Councils grouped into five equal groups by their ABS ranking within Victoria.</p>
+      <div id="vis11" class="vis"></div>
+      <p class="note"><strong>How to read a box plot:</strong> each dot is a council. The box holds the middle half of councils, the line inside is the typical (median) council, and the whiskers reach the lowest and highest.</p>
+    </div>
+  </div>
+
+  <p class="takeaway">In the most disadvantaged councils, the typical crime rate (7,494) is
+    <span class="hl">63% higher</span> than in the least disadvantaged (4,599).</p>
+</section>
+
+<!-- ================= 05 SOLVED ================= -->
+<section id="solved">
+  <div class="section-head">
+    <span class="num">05 · Solved or not?</span>
+    <h2>More crimes are going unsolved</h2>
+    <p>Police record the outcome of each incident. "Unsolved" means no offender has been identified.
+      For all five main types of crime, the unsolved share is higher than in 2017. One in four crimes against
+      the person now goes unsolved, up from one in seven.</p>
+  </div>
+
+  <div class="row wide-left">
+    <div class="panel">
+      <h3>Share of incidents with no offender identified</h3>
+      <p class="sub">2017 vs 2026, by type of crime.</p>
+      <div id="vis12" class="vis"></div>
+      <p class="note">Source: Crime Statistics Agency, state Table 04 (charge status).</p>
+    </div>
+    <div class="text-panel">
+      <h3>What this means</h3>
+      <p>Most property crime, such as theft from cars, has always been hard to solve: <strong>three in four</strong> incidents stay unsolved.</p>
+      <p>The bigger change is in <strong>violent and public order offences</strong>, where the unsolved share has roughly doubled or more.</p>
+      <p>So Victoria's crime picture is less about "more crime" overall and more about <strong>which</strong> crimes,
+        <strong>where</strong>, and how many lead to a result.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER / METADATA ================= -->
+<footer>
+  <div class="wrap">
+    <div>
+      <h4>Data sources</h4>
+      <ul>
+        <li>Crime Statistics Agency Victoria (2026). <em>Data Tables: LGA Criminal Incidents, year ending June 2026</em> and <em>Data Tables: Criminal Incidents Visualisation, year ending June 2026</em>. CC BY 4.0.
+          <a href="https://www.crimestatistics.vic.gov.au/crime-statistics/latest-victorian-crime-data/download-data">crimestatistics.vic.gov.au</a></li>
+        <li>Australian Bureau of Statistics (2023). <em>Socio-Economic Indexes for Areas (SEIFA), Australia, 2021: Local Government Area indexes</em>. CC BY 4.0.
+          <a href="https://www.abs.gov.au/statistics/people/people-and-communities/socio-economic-indexes-areas-seifa-australia/2021">abs.gov.au</a></li>
+        <li>Victorian suburb (locality) boundaries, from the FIT3179 Vega-Lite teaching repository.
+          <a href="https://github.com/FIT3179/Vega-Lite">github.com/FIT3179/Vega-Lite</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>About</h4>
+      <ul>
+        <li><strong>Author:</strong> Farhan Abdulla, Monash University (FIT3179 Data Visualisation 2)</li>
+        <li><strong>Date:</strong> 12 October 2026</li>
+        <li><strong>Built with:</strong> Vega-Lite 5, HTML and CSS. Chart specifications are in the <code>js/</code> folder; data preparation scripts are in <code>prep/</code>.</li>
+        <li><strong>Notes:</strong> Rates are per 100,000 residents. Melbourne council's rate is inflated by its large daytime population of workers and visitors. The ABS disadvantage index is from the 2021 Census, the most recent available.</li>
+        <li><strong>AI use:</strong> Generative AI (Claude, Anthropic) was used to help write code and edit text, as acknowledged in the assignment submission.</li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

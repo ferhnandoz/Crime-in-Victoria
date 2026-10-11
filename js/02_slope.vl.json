@@ -1,0 +1,237 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Crime rate per 100,000 people by offence division, 2017 compared with 2026.",
+  "data": {
+    "url": "data/division_year.csv"
+  },
+  "transform": [
+    {
+      "filter": "(datum.year == 2017 || datum.year == 2026) && datum.division != 'Other offences'"
+    },
+    {
+      "window": [
+        {
+          "op": "first_value",
+          "field": "rate",
+          "as": "rate_2017"
+        }
+      ],
+      "groupby": [
+        "division"
+      ],
+      "sort": [
+        {
+          "field": "year"
+        }
+      ]
+    },
+    {
+      "calculate": "100 * (datum.rate / datum.rate_2017 - 1)",
+      "as": "change"
+    },
+    {
+      "calculate": "datum.division + '  ' + (datum.change >= 0 ? '+' : '') + format(datum.change, '.0f') + '%'",
+      "as": "label"
+    },
+    {
+      "calculate": "datum.division == 'Public order and security' ? datum.rate * 1.13 : datum.division == 'Drug offences' ? datum.rate * 0.88 : datum.rate",
+      "as": "label_y"
+    }
+  ],
+  "width": 240,
+  "height": 340,
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "ordinal",
+      "title": null,
+      "scale": {
+        "padding": 0.2
+      },
+      "axis": {
+        "labelAngle": 0,
+        "labelFontSize": 14,
+        "labelFontWeight": 700,
+        "labelColor": "#1d2433",
+        "domain": false,
+        "ticks": false,
+        "orient": "top"
+      }
+    },
+    "y": {
+      "field": "rate",
+      "type": "quantitative",
+      "title": "Incidents per 100,000 people",
+      "scale": {
+        "type": "log",
+        "domain": [
+          150,
+          6000
+        ]
+      },
+      "axis": {
+        "values": [
+          200,
+          500,
+          1000,
+          2000,
+          5000
+        ],
+        "format": ","
+      }
+    },
+    "color": {
+      "field": "division",
+      "type": "nominal",
+      "legend": null,
+      "scale": {
+        "domain": [
+          "Crimes against the person",
+          "Property and deception",
+          "Justice procedures",
+          "Drug offences",
+          "Public order and security",
+          "Other offences"
+        ],
+        "range": [
+          "#b3261e",
+          "#1f3a5f",
+          "#c07a1d",
+          "#3f7d5c",
+          "#7a5c99",
+          "#9aa0a6"
+        ]
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "strokeWidth": 3
+      }
+    },
+    {
+      "mark": {
+        "type": "circle",
+        "size": 90,
+        "opacity": 1
+      },
+      "encoding": {
+        "tooltip": [
+          {
+            "field": "division",
+            "title": "Offence type"
+          },
+          {
+            "field": "year",
+            "title": "Year ending June"
+          },
+          {
+            "field": "rate",
+            "title": "Per 100,000 people",
+            "format": ",.0f"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.year == 2026"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 10,
+        "fontWeight": 600,
+        "fontSize": 13
+      },
+      "encoding": {
+        "y": {
+          "field": "label_y",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.year == 2017"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": -10,
+        "fontSize": 12
+      },
+      "encoding": {
+        "text": {
+          "field": "rate",
+          "format": ",.0f"
+        },
+        "color": {
+          "value": "#545c6b"
+        },
+        "y": {
+          "field": "label_y",
+          "type": "quantitative"
+        }
+      }
+    }
+  ],
+  "config": {
+    "font": "Archivo",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Archivo",
+      "titleFont": "Archivo",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": 600,
+      "labelColor": "#545c6b",
+      "titleColor": "#545c6b",
+      "domainColor": "#c9c4b8",
+      "tickColor": "#c9c4b8",
+      "gridColor": "#ece8df"
+    },
+    "axisQuantitative": {
+      "format": ",.0f"
+    },
+    "legend": {
+      "labelFont": "Archivo",
+      "titleFont": "Archivo",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": 600,
+      "labelColor": "#545c6b",
+      "titleColor": "#1d2433"
+    },
+    "header": {
+      "labelFont": "Archivo",
+      "titleFont": "Archivo",
+      "labelFontSize": 13,
+      "labelFontWeight": 600,
+      "labelColor": "#1d2433"
+    },
+    "text": {
+      "font": "Archivo",
+      "fontSize": 12,
+      "color": "#1d2433"
+    },
+    "title": {
+      "font": "Archivo",
+      "fontSize": 14,
+      "fontWeight": 700,
+      "color": "#1d2433",
+      "anchor": "start"
+    }
+  }
+}

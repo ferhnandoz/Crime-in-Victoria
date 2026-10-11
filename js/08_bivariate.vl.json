@@ -1,0 +1,376 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Councils grouped by crime rate (thirds) and ABS disadvantage score (thirds).",
+  "hconcat": [
+    {
+      "title": "All of Victoria",
+      "width": 430,
+      "height": 320,
+      "data": {
+        "url": "data/vic_lga.topojson",
+        "format": {
+          "type": "topojson",
+          "feature": "lga"
+        }
+      },
+      "transform": [
+        {
+          "calculate": "datum.properties.lga",
+          "as": "lga"
+        },
+        {
+          "lookup": "lga",
+          "from": {
+            "data": {
+              "url": "data/lga.csv"
+            },
+            "key": "lga",
+            "fields": [
+              "region",
+              "incidents",
+              "rate",
+              "rate_2017",
+              "change_pct",
+              "irsd_score",
+              "disadvantage",
+              "bivar",
+              "metro",
+              "unsolved_pct"
+            ]
+          }
+        }
+      ],
+      "projection": {
+        "type": "conicEqualArea",
+        "parallels": [
+          -36,
+          -38
+        ],
+        "rotate": [
+          -145,
+          0
+        ]
+      },
+      "mark": {
+        "type": "geoshape",
+        "stroke": "#ffffff",
+        "strokeWidth": 0.6
+      },
+      "encoding": {
+        "color": {
+          "field": "bivar",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "1-1",
+              "2-1",
+              "3-1",
+              "1-2",
+              "2-2",
+              "3-2",
+              "1-3",
+              "2-3",
+              "3-3"
+            ],
+            "range": [
+              "#e8e8e8",
+              "#e4acac",
+              "#c85a5a",
+              "#b0d5df",
+              "#ad9ea5",
+              "#985356",
+              "#64acbe",
+              "#627f8c",
+              "#574249"
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "lga",
+            "title": "Council"
+          },
+          {
+            "field": "rate",
+            "title": "Crime per 100,000",
+            "format": ",.0f"
+          },
+          {
+            "field": "disadvantage",
+            "title": "Disadvantage (ABS)"
+          }
+        ]
+      }
+    },
+    {
+      "title": "Zoom: metropolitan Melbourne",
+      "width": 300,
+      "height": 320,
+      "data": {
+        "url": "data/vic_lga.topojson",
+        "format": {
+          "type": "topojson",
+          "feature": "lga"
+        }
+      },
+      "transform": [
+        {
+          "calculate": "datum.properties.lga",
+          "as": "lga"
+        },
+        {
+          "lookup": "lga",
+          "from": {
+            "data": {
+              "url": "data/lga.csv"
+            },
+            "key": "lga",
+            "fields": [
+              "region",
+              "incidents",
+              "rate",
+              "rate_2017",
+              "change_pct",
+              "irsd_score",
+              "disadvantage",
+              "bivar",
+              "metro",
+              "unsolved_pct"
+            ]
+          }
+        },
+        {
+          "filter": "datum.metro == 'True' || datum.metro == true"
+        }
+      ],
+      "projection": {
+        "type": "conicEqualArea",
+        "parallels": [
+          -36,
+          -38
+        ],
+        "rotate": [
+          -145,
+          0
+        ]
+      },
+      "mark": {
+        "type": "geoshape",
+        "stroke": "#ffffff",
+        "strokeWidth": 0.6
+      },
+      "encoding": {
+        "color": {
+          "field": "bivar",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "1-1",
+              "2-1",
+              "3-1",
+              "1-2",
+              "2-2",
+              "3-2",
+              "1-3",
+              "2-3",
+              "3-3"
+            ],
+            "range": [
+              "#e8e8e8",
+              "#e4acac",
+              "#c85a5a",
+              "#b0d5df",
+              "#ad9ea5",
+              "#985356",
+              "#64acbe",
+              "#627f8c",
+              "#574249"
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "lga",
+            "title": "Council"
+          },
+          {
+            "field": "rate",
+            "title": "Crime per 100,000",
+            "format": ",.0f"
+          },
+          {
+            "field": "disadvantage",
+            "title": "Disadvantage (ABS)"
+          }
+        ]
+      }
+    },
+    {
+      "title": {
+        "text": "How to read the colours",
+        "fontSize": 13
+      },
+      "data": {
+        "url": "data/lga.csv"
+      },
+      "transform": [
+        {
+          "aggregate": [
+            {
+              "op": "count",
+              "as": "councils"
+            }
+          ],
+          "groupby": [
+            "bivar",
+            "crime_t",
+            "disadv_t"
+          ]
+        }
+      ],
+      "width": 150,
+      "height": 150,
+      "encoding": {
+        "x": {
+          "field": "disadv_t",
+          "type": "ordinal",
+          "title": "More disadvantage \u2192",
+          "axis": {
+            "labelExpr": "['', 'Low', 'Mid', 'High'][datum.value]",
+            "labelAngle": 0,
+            "domain": false,
+            "ticks": false
+          }
+        },
+        "y": {
+          "field": "crime_t",
+          "type": "ordinal",
+          "title": "More crime \u2192",
+          "sort": "descending",
+          "axis": {
+            "labelExpr": "['', 'Low', 'Mid', 'High'][datum.value]",
+            "domain": false,
+            "ticks": false
+          }
+        }
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "rect",
+            "stroke": "#ffffff",
+            "strokeWidth": 2
+          },
+          "encoding": {
+            "color": {
+              "field": "bivar",
+              "type": "nominal",
+              "legend": null,
+              "scale": {
+                "domain": [
+                  "1-1",
+                  "2-1",
+                  "3-1",
+                  "1-2",
+                  "2-2",
+                  "3-2",
+                  "1-3",
+                  "2-3",
+                  "3-3"
+                ],
+                "range": [
+                  "#e8e8e8",
+                  "#e4acac",
+                  "#c85a5a",
+                  "#b0d5df",
+                  "#ad9ea5",
+                  "#985356",
+                  "#64acbe",
+                  "#627f8c",
+                  "#574249"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "fontSize": 12,
+            "fontWeight": 700
+          },
+          "encoding": {
+            "text": {
+              "field": "councils"
+            },
+            "color": {
+              "condition": {
+                "test": "datum.bivar == '3-3' || datum.bivar == '2-3' || datum.bivar == '3-2'",
+                "value": "#ffffff"
+              },
+              "value": "#1d2433"
+            },
+            "tooltip": [
+              {
+                "field": "councils",
+                "title": "Number of councils"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "spacing": 24,
+  "config": {
+    "font": "Archivo",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Archivo",
+      "titleFont": "Archivo",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": 600,
+      "labelColor": "#545c6b",
+      "titleColor": "#545c6b",
+      "domainColor": "#c9c4b8",
+      "tickColor": "#c9c4b8",
+      "gridColor": "#ece8df"
+    },
+    "axisQuantitative": {
+      "format": ",.0f"
+    },
+    "legend": {
+      "labelFont": "Archivo",
+      "titleFont": "Archivo",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": 600,
+      "labelColor": "#545c6b",
+      "titleColor": "#1d2433"
+    },
+    "header": {
+      "labelFont": "Archivo",
+      "titleFont": "Archivo",
+      "labelFontSize": 13,
+      "labelFontWeight": 600,
+      "labelColor": "#1d2433"
+    },
+    "text": {
+      "font": "Archivo",
+      "fontSize": 12,
+      "color": "#1d2433"
+    },
+    "title": {
+      "font": "Archivo",
+      "fontSize": 14,
+      "fontWeight": 700,
+      "color": "#1d2433",
+      "anchor": "start"
+    }
+  }
+}

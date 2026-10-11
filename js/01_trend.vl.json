@@ -1,0 +1,180 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Criminal incidents recorded in Victoria, years ending June 2017-2026.",
+  "data": {
+    "url": "data/state_trend.csv"
+  },
+  "width": "container",
+  "height": 300,
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "ordinal",
+      "title": "Year ending June",
+      "axis": {
+        "labelAngle": 0
+      }
+    },
+    "y": {
+      "field": "incidents",
+      "type": "quantitative",
+      "title": "Criminal incidents recorded",
+      "scale": {
+        "domain": [
+          0,
+          520000
+        ]
+      },
+      "axis": {
+        "format": "~s",
+        "tickCount": 5
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "area",
+        "color": "#1f3a5f",
+        "opacity": 0.08
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "color": "#1f3a5f",
+        "strokeWidth": 3
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 60,
+        "color": "#1f3a5f"
+      },
+      "encoding": {
+        "color": {
+          "condition": {
+            "test": "datum.year == 2022 || datum.year == 2025",
+            "value": "#b3261e"
+          },
+          "value": "#1f3a5f"
+        },
+        "size": {
+          "condition": {
+            "test": "datum.year == 2022 || datum.year == 2025",
+            "value": 140
+          },
+          "value": 60
+        },
+        "tooltip": [
+          {
+            "field": "year",
+            "title": "Year ending June"
+          },
+          {
+            "field": "incidents",
+            "title": "Incidents",
+            "format": ","
+          },
+          {
+            "field": "rate",
+            "title": "Per 100,000 people",
+            "format": ",.0f"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.year == 2025"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "dy": -18,
+        "fontWeight": 700,
+        "color": "#b3261e",
+        "align": "center"
+      },
+      "encoding": {
+        "text": {
+          "value": "Decade high: 482,134"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.year == 2022"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "dy": 30,
+        "fontWeight": 700,
+        "color": "#b3261e",
+        "align": "center"
+      },
+      "encoding": {
+        "text": {
+          "value": [
+            "Decade low: 340,067",
+            "(year included the last lockdowns)"
+          ]
+        }
+      }
+    }
+  ],
+  "config": {
+    "font": "Archivo",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Archivo",
+      "titleFont": "Archivo",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": 600,
+      "labelColor": "#545c6b",
+      "titleColor": "#545c6b",
+      "domainColor": "#c9c4b8",
+      "tickColor": "#c9c4b8",
+      "gridColor": "#ece8df"
+    },
+    "axisQuantitative": {
+      "format": ",.0f"
+    },
+    "legend": {
+      "labelFont": "Archivo",
+      "titleFont": "Archivo",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": 600,
+      "labelColor": "#545c6b",
+      "titleColor": "#1d2433"
+    },
+    "header": {
+      "labelFont": "Archivo",
+      "titleFont": "Archivo",
+      "labelFontSize": 13,
+      "labelFontWeight": 600,
+      "labelColor": "#1d2433"
+    },
+    "text": {
+      "font": "Archivo",
+      "fontSize": 12,
+      "color": "#1d2433"
+    },
+    "title": {
+      "font": "Archivo",
+      "fontSize": 14,
+      "fontWeight": 700,
+      "color": "#1d2433",
+      "anchor": "start"
+    }
+  }
+}

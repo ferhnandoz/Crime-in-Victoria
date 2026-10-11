@@ -1,0 +1,179 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Rate per 100,000 people for four offence divisions, by council, year ending June 2026.",
+  "data": {
+    "url": "data/lga_division.csv"
+  },
+  "transform": [
+    {
+      "lookup": "lga",
+      "from": {
+        "data": {
+          "url": "data/vic_lga.topojson",
+          "format": {
+            "type": "topojson",
+            "feature": "lga"
+          }
+        },
+        "key": "properties.lga"
+      },
+      "as": "geo"
+    },
+    {
+      "window": [
+        {
+          "op": "percent_rank",
+          "as": "pr"
+        }
+      ],
+      "groupby": [
+        "division"
+      ],
+      "sort": [
+        {
+          "field": "rate"
+        }
+      ]
+    },
+    {
+      "calculate": "datum.pr < 0.2 ? 'Lowest fifth' : datum.pr < 0.4 ? 'Low' : datum.pr < 0.6 ? 'Middle' : datum.pr < 0.8 ? 'High' : 'Highest fifth'",
+      "as": "band"
+    }
+  ],
+  "columns": 2,
+  "facet": {
+    "field": "division",
+    "type": "nominal",
+    "title": null,
+    "sort": [
+      "Property and deception",
+      "Crimes against the person",
+      "Drug offences",
+      "Public order and security"
+    ],
+    "header": {
+      "labelFontSize": 14,
+      "labelAnchor": "start"
+    }
+  },
+  "spec": {
+    "width": 380,
+    "height": 230,
+    "projection": {
+      "type": "conicEqualArea",
+      "parallels": [
+        -36,
+        -38
+      ],
+      "rotate": [
+        -145,
+        0
+      ]
+    },
+    "mark": {
+      "type": "geoshape",
+      "stroke": "#ffffff",
+      "strokeWidth": 0.4
+    },
+    "encoding": {
+      "shape": {
+        "field": "geo",
+        "type": "geojson"
+      },
+      "color": {
+        "field": "band",
+        "type": "ordinal",
+        "title": "Council's rate compared with other councils (for that crime type)",
+        "scale": {
+          "domain": [
+            "Lowest fifth",
+            "Low",
+            "Middle",
+            "High",
+            "Highest fifth"
+          ],
+          "range": [
+            "#f6efe4",
+            "#e9c9a4",
+            "#d48f63",
+            "#b3261e",
+            "#6b100b"
+          ]
+        },
+        "legend": {
+          "orient": "top",
+          "direction": "horizontal",
+          "titleLimit": 500
+        }
+      },
+      "tooltip": [
+        {
+          "field": "lga",
+          "title": "Council"
+        },
+        {
+          "field": "division",
+          "title": "Offence type"
+        },
+        {
+          "field": "rate",
+          "title": "Per 100,000 people",
+          "format": ",.0f"
+        }
+      ]
+    }
+  },
+  "spacing": {
+    "column": 30,
+    "row": 24
+  },
+  "config": {
+    "font": "Archivo",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Archivo",
+      "titleFont": "Archivo",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": 600,
+      "labelColor": "#545c6b",
+      "titleColor": "#545c6b",
+      "domainColor": "#c9c4b8",
+      "tickColor": "#c9c4b8",
+      "gridColor": "#ece8df"
+    },
+    "axisQuantitative": {
+      "format": ",.0f"
+    },
+    "legend": {
+      "labelFont": "Archivo",
+      "titleFont": "Archivo",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": 600,
+      "labelColor": "#545c6b",
+      "titleColor": "#1d2433"
+    },
+    "header": {
+      "labelFont": "Archivo",
+      "titleFont": "Archivo",
+      "labelFontSize": 13,
+      "labelFontWeight": 600,
+      "labelColor": "#1d2433"
+    },
+    "text": {
+      "font": "Archivo",
+      "fontSize": 12,
+      "color": "#1d2433"
+    },
+    "title": {
+      "font": "Archivo",
+      "fontSize": 14,
+      "fontWeight": 700,
+      "color": "#1d2433",
+      "anchor": "start"
+    }
+  }
+}

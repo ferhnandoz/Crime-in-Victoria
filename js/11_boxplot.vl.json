@@ -1,0 +1,199 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Distribution of council crime rates within each ABS disadvantage group (Victorian deciles).",
+  "data": {
+    "url": "data/lga.csv"
+  },
+  "transform": [
+    {
+      "calculate": "(random() - 0.5) * 0.6",
+      "as": "jitter"
+    }
+  ],
+  "width": "container",
+  "height": 340,
+  "encoding": {
+    "x": {
+      "field": "disadvantage",
+      "type": "ordinal",
+      "sort": [
+        "Least disadvantaged",
+        "Less disadvantaged",
+        "Middle",
+        "More disadvantaged",
+        "Most disadvantaged"
+      ],
+      "title": null,
+      "axis": {
+        "labelAngle": 0,
+        "labelFontSize": 12.5,
+        "labelFontWeight": 600
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "boxplot",
+        "extent": "min-max",
+        "size": 46,
+        "opacity": 0.9,
+        "median": {
+          "color": "#1d2433",
+          "strokeWidth": 2.5
+        },
+        "rule": {
+          "color": "#545c6b"
+        }
+      },
+      "encoding": {
+        "y": {
+          "field": "rate",
+          "type": "quantitative",
+          "title": "Incidents per 100,000 people",
+          "axis": {
+            "format": ",.0f"
+          }
+        },
+        "color": {
+          "field": "disadvantage",
+          "type": "ordinal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "Least disadvantaged",
+              "Less disadvantaged",
+              "Middle",
+              "More disadvantaged",
+              "Most disadvantaged"
+            ],
+            "range": [
+              "#f3dccb",
+              "#eab598",
+              "#d98a6a",
+              "#c55a43",
+              "#b3261e"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "circle",
+        "size": 26,
+        "color": "#1d2433",
+        "opacity": 0.55
+      },
+      "encoding": {
+        "y": {
+          "field": "rate",
+          "type": "quantitative"
+        },
+        "xOffset": {
+          "field": "jitter",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              -1,
+              1
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "lga",
+            "title": "Council"
+          },
+          {
+            "field": "rate",
+            "title": "Per 100,000 people",
+            "format": ",.0f"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "aggregate": [
+            {
+              "op": "median",
+              "field": "rate",
+              "as": "median"
+            }
+          ],
+          "groupby": [
+            "disadvantage"
+          ]
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "dx": 34,
+        "align": "left",
+        "fontWeight": 700,
+        "fontSize": 12.5
+      },
+      "encoding": {
+        "y": {
+          "field": "median",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "median",
+          "format": ",.0f"
+        }
+      }
+    }
+  ],
+  "config": {
+    "font": "Archivo",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Archivo",
+      "titleFont": "Archivo",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": 600,
+      "labelColor": "#545c6b",
+      "titleColor": "#545c6b",
+      "domainColor": "#c9c4b8",
+      "tickColor": "#c9c4b8",
+      "gridColor": "#ece8df"
+    },
+    "axisQuantitative": {
+      "format": ",.0f"
+    },
+    "legend": {
+      "labelFont": "Archivo",
+      "titleFont": "Archivo",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": 600,
+      "labelColor": "#545c6b",
+      "titleColor": "#1d2433"
+    },
+    "header": {
+      "labelFont": "Archivo",
+      "titleFont": "Archivo",
+      "labelFontSize": 13,
+      "labelFontWeight": 600,
+      "labelColor": "#1d2433"
+    },
+    "text": {
+      "font": "Archivo",
+      "fontSize": 12,
+      "color": "#1d2433"
+    },
+    "title": {
+      "font": "Archivo",
+      "fontSize": 14,
+      "fontWeight": 700,
+      "color": "#1d2433",
+      "anchor": "start"
+    }
+  }
+}

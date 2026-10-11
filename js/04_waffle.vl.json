@@ -1,0 +1,197 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Share of 2026 incidents flagged as family-violence related, for three offence types.",
+  "data": {
+    "url": "data/family_flag.csv"
+  },
+  "transform": [
+    {
+      "filter": "datum.year == 2026"
+    },
+    {
+      "joinaggregate": [
+        {
+          "op": "sum",
+          "field": "incidents",
+          "as": "total"
+        }
+      ],
+      "groupby": [
+        "division"
+      ]
+    },
+    {
+      "filter": "datum.flag == 'Family incident related'"
+    },
+    {
+      "filter": {
+        "field": "division",
+        "oneOf": [
+          "Justice procedures",
+          "Crimes against the person",
+          "Property and deception"
+        ]
+      }
+    },
+    {
+      "calculate": "round(100 * datum.incidents / datum.total)",
+      "as": "pct"
+    },
+    {
+      "calculate": "datum.division + ': ' + datum.pct + '%'",
+      "as": "panel"
+    },
+    {
+      "calculate": "sequence(0, 100)",
+      "as": "cell"
+    },
+    {
+      "flatten": [
+        "cell"
+      ]
+    },
+    {
+      "calculate": "datum.cell % 10",
+      "as": "col"
+    },
+    {
+      "calculate": "floor(datum.cell / 10)",
+      "as": "row"
+    },
+    {
+      "calculate": "datum.cell < datum.pct ? 'Family-violence related' : 'Other incidents'",
+      "as": "type"
+    }
+  ],
+  "facet": {
+    "column": {
+      "field": "panel",
+      "type": "nominal",
+      "title": null,
+      "sort": {
+        "field": "pct",
+        "order": "descending"
+      },
+      "header": {
+        "labelFontSize": 13,
+        "labelLimit": 260
+      }
+    }
+  },
+  "spacing": 36,
+  "spec": {
+    "width": {
+      "step": 17
+    },
+    "height": {
+      "step": 17
+    },
+    "mark": {
+      "type": "square",
+      "size": 210,
+      "opacity": 1
+    },
+    "encoding": {
+      "x": {
+        "field": "col",
+        "type": "ordinal",
+        "axis": null
+      },
+      "y": {
+        "field": "row",
+        "type": "ordinal",
+        "axis": null,
+        "sort": "descending"
+      },
+      "color": {
+        "field": "type",
+        "type": "nominal",
+        "title": null,
+        "scale": {
+          "domain": [
+            "Family-violence related",
+            "Other incidents"
+          ],
+          "range": [
+            "#b3261e",
+            "#e3ddd0"
+          ]
+        },
+        "legend": {
+          "orient": "bottom",
+          "direction": "horizontal",
+          "symbolType": "square"
+        }
+      },
+      "tooltip": [
+        {
+          "field": "division",
+          "title": "Offence type"
+        },
+        {
+          "field": "incidents",
+          "title": "Family-violence incidents",
+          "format": ","
+        },
+        {
+          "field": "total",
+          "title": "All incidents",
+          "format": ","
+        },
+        {
+          "field": "pct",
+          "title": "Share (%)"
+        }
+      ]
+    }
+  },
+  "config": {
+    "font": "Archivo",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Archivo",
+      "titleFont": "Archivo",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": 600,
+      "labelColor": "#545c6b",
+      "titleColor": "#545c6b",
+      "domainColor": "#c9c4b8",
+      "tickColor": "#c9c4b8",
+      "gridColor": "#ece8df"
+    },
+    "axisQuantitative": {
+      "format": ",.0f"
+    },
+    "legend": {
+      "labelFont": "Archivo",
+      "titleFont": "Archivo",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": 600,
+      "labelColor": "#545c6b",
+      "titleColor": "#1d2433"
+    },
+    "header": {
+      "labelFont": "Archivo",
+      "titleFont": "Archivo",
+      "labelFontSize": 13,
+      "labelFontWeight": 600,
+      "labelColor": "#1d2433"
+    },
+    "text": {
+      "font": "Archivo",
+      "fontSize": 12,
+      "color": "#1d2433"
+    },
+    "title": {
+      "font": "Archivo",
+      "fontSize": 14,
+      "fontWeight": 700,
+      "color": "#1d2433",
+      "anchor": "start"
+    }
+  }
+}

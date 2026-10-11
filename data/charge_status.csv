@@ -1,0 +1,181 @@
+year,division,status,incidents,share
+2017,Crimes against the person,Charges laid,35911,0.5880301293597511
+2017,Crimes against the person,No charges laid,16539,0.27082037006713605
+2017,Crimes against the person,Unsolved,8620,0.14114950057311282
+2017,Drug offences,Charges laid,10661,0.6876289989680082
+2017,Drug offences,No charges laid,4397,0.2836042311661507
+2017,Drug offences,Unsolved,446,0.028766769865841074
+2017,Justice procedures,Charges laid,37101,0.7935533548649285
+2017,Justice procedures,No charges laid,5438,0.11631339165401151
+2017,Justice procedures,Unsolved,4214,0.09013325348106004
+2017,Other offences,Charges laid,469,0.6075129533678757
+2017,Other offences,No charges laid,165,0.21373056994818654
+2017,Other offences,Unsolved,138,0.17875647668393782
+2017,Property and deception,Charges laid,63978,0.24955045968179176
+2017,Property and deception,No charges laid,13023,0.05079708081584254
+2017,Property and deception,Unsolved,179372,0.6996524595023657
+2017,Public order and security,Charges laid,10437,0.422225818196529
+2017,Public order and security,No charges laid,13312,0.5385331121809135
+2017,Public order and security,Unsolved,970,0.039241069622557544
+2018,Crimes against the person,Charges laid,35797,0.5768592377729433
+2018,Crimes against the person,No charges laid,17567,0.2830875835951978
+2018,Crimes against the person,Unsolved,8691,0.14005317863185884
+2018,Drug offences,Charges laid,10223,0.6828991315965264
+2018,Drug offences,No charges laid,4357,0.29104876419505676
+2018,Drug offences,Unsolved,390,0.026052104208416832
+2018,Justice procedures,Charges laid,37877,0.8047806225432912
+2018,Justice procedures,No charges laid,5628,0.11957930521619038
+2018,Justice procedures,Unsolved,3560,0.07564007224051843
+2018,Other offences,Charges laid,395,0.5939849624060151
+2018,Other offences,No charges laid,123,0.1849624060150376
+2018,Other offences,Unsolved,147,0.22105263157894736
+2018,Property and deception,Charges laid,60124,0.2580983043571582
+2018,Property and deception,No charges laid,13011,0.05585318737926594
+2018,Property and deception,Unsolved,159815,0.6860485082635759
+2018,Public order and security,Charges laid,10126,0.4232746729089161
+2018,Public order and security,No charges laid,12885,0.5386030180161351
+2018,Public order and security,Unsolved,912,0.0381223090749488
+2019,Crimes against the person,Charges laid,36152,0.5664681917894077
+2019,Crimes against the person,No charges laid,18900,0.29614540896270763
+2019,Crimes against the person,Unsolved,8768,0.13738639924788468
+2019,Drug offences,Charges laid,10612,0.6551830585910972
+2019,Drug offences,No charges laid,5045,0.3114774340927332
+2019,Drug offences,Unsolved,540,0.033339507316169664
+2019,Justice procedures,Charges laid,39698,0.8021904742659688
+2019,Justice procedures,No charges laid,5790,0.11700042435387072
+2019,Justice procedures,Unsolved,3999,0.08080910138016045
+2019,Other offences,Charges laid,396,0.5217391304347826
+2019,Other offences,No charges laid,140,0.1844532279314888
+2019,Other offences,Unsolved,223,0.2938076416337286
+2019,Property and deception,Charges laid,59490,0.2564810064368153
+2019,Property and deception,No charges laid,14074,0.060677654809072765
+2019,Property and deception,Unsolved,158383,0.6828413387541119
+2019,Public order and security,Charges laid,10769,0.4572823779193206
+2019,Public order and security,No charges laid,11808,0.5014012738853503
+2019,Public order and security,Unsolved,973,0.04131634819532909
+2020,Crimes against the person,Charges laid,36272,0.5553565140171176
+2020,Crimes against the person,No charges laid,20242,0.30992298623551207
+2020,Crimes against the person,Unsolved,8799,0.13472049974737035
+2020,Drug offences,Charges laid,11713,0.6523531049846839
+2020,Drug offences,No charges laid,5675,0.316067947646895
+2020,Drug offences,Unsolved,567,0.031578947368421054
+2020,Justice procedures,Charges laid,42370,0.7933714071716131
+2020,Justice procedures,No charges laid,6253,0.11708641512966951
+2020,Justice procedures,Unsolved,4782,0.08954217769871735
+2020,Other offences,Charges laid,611,0.09211518166742047
+2020,Other offences,No charges laid,5838,0.8801447308909995
+2020,Other offences,Unsolved,184,0.027740087441579978
+2020,Property and deception,Charges laid,58060,0.23856973213295146
+2020,Property and deception,No charges laid,14605,0.06001224488118767
+2020,Property and deception,Unsolved,170702,0.7014180229858609
+2020,Public order and security,Charges laid,10160,0.509324243031883
+2020,Public order and security,No charges laid,8755,0.4388911169039503
+2020,Public order and security,Unsolved,1033,0.05178464006416683
+2021,Crimes against the person,Charges laid,36848,0.5643829741610379
+2021,Crimes against the person,No charges laid,20479,0.31366692704743526
+2021,Crimes against the person,Unsolved,7962,0.1219500987915269
+2021,Drug offences,Charges laid,11067,0.6682163989856298
+2021,Drug offences,No charges laid,4922,0.2971863301533631
+2021,Drug offences,Unsolved,573,0.034597270861007126
+2021,Justice procedures,Charges laid,42742,0.7951556192212528
+2021,Justice procedures,No charges laid,6390,0.11887708593008763
+2021,Justice procedures,Unsolved,4621,0.08596729484865961
+2021,Other offences,Charges laid,2084,0.06467430096514912
+2021,Other offences,No charges laid,29995,0.9308568413865872
+2021,Other offences,Unsolved,144,0.004468857648263663
+2021,Property and deception,Charges laid,46957,0.2447806164737037
+2021,Property and deception,No charges laid,12503,0.0651764816272487
+2021,Property and deception,Unsolved,132373,0.6900429018990476
+2021,Public order and security,Charges laid,9787,0.5553537990126539
+2021,Public order and security,No charges laid,6795,0.3855756681609261
+2021,Public order and security,Unsolved,1041,0.05907053282642002
+2022,Crimes against the person,Charges laid,34644,0.536733492393022
+2022,Crimes against the person,No charges laid,21326,0.33040002478852293
+2022,Crimes against the person,Unsolved,8576,0.13286648281845506
+2022,Drug offences,Charges laid,8491,0.632995377963322
+2022,Drug offences,No charges laid,4434,0.330550171462651
+2022,Drug offences,Unsolved,489,0.03645445057402714
+2022,Justice procedures,Charges laid,40816,0.7891724671307038
+2022,Justice procedures,No charges laid,6220,0.12026295436968291
+2022,Justice procedures,Unsolved,4684,0.0905645784996133
+2022,Other offences,Charges laid,1471,0.14745388933440257
+2022,Other offences,No charges laid,8379,0.839915797914996
+2022,Other offences,Unsolved,126,0.012630312750601443
+2022,Property and deception,Charges laid,42157,0.22948454842871374
+2022,Property and deception,No charges laid,12738,0.06934018497248276
+2022,Property and deception,Unsolved,128808,0.7011752665988035
+2022,Public order and security,Charges laid,8859,0.5302250418960976
+2022,Public order and security,No charges laid,6716,0.40196313143404355
+2022,Public order and security,Unsolved,1133,0.06781182666985874
+2023,Crimes against the person,Charges laid,34117,0.5106570872623859
+2023,Crimes against the person,No charges laid,22621,0.3385870378685826
+2023,Crimes against the person,Unsolved,10072,0.15075587486903158
+2023,Drug offences,Charges laid,8742,0.635181283150476
+2023,Drug offences,No charges laid,4517,0.3281987938676161
+2023,Drug offences,Unsolved,504,0.03661992298190801
+2023,Justice procedures,Charges laid,46438,0.8032171581769437
+2023,Justice procedures,No charges laid,6604,0.11422641183083974
+2023,Justice procedures,Unsolved,4773,0.08255642999221656
+2023,Other offences,Charges laid,398,0.5685714285714286
+2023,Other offences,No charges laid,194,0.27714285714285714
+2023,Other offences,Unsolved,108,0.15428571428571428
+2023,Property and deception,Charges laid,47862,0.22360300678816533
+2023,Property and deception,No charges laid,15634,0.07303935080285355
+2023,Property and deception,Unsolved,150553,0.7033576424089811
+2023,Public order and security,Charges laid,9418,0.5430119926199262
+2023,Public order and security,No charges laid,6598,0.380419741697417
+2023,Public order and security,Unsolved,1328,0.07656826568265683
+2024,Crimes against the person,Charges laid,34140,0.4889086196279483
+2024,Crimes against the person,No charges laid,25014,0.3582179323776654
+2024,Crimes against the person,Unsolved,10675,0.1528734479943863
+2024,Drug offences,Charges laid,9843,0.6717395755135467
+2024,Drug offences,No charges laid,4294,0.2930457926704429
+2024,Drug offences,Unsolved,516,0.035214631816010374
+2024,Justice procedures,Charges laid,44875,0.7842126417699177
+2024,Justice procedures,No charges laid,7150,0.12494975796445486
+2024,Justice procedures,Unsolved,5198,0.09083760026562746
+2024,Other offences,Charges laid,370,0.5745341614906833
+2024,Other offences,No charges laid,174,0.2701863354037267
+2024,Other offences,Unsolved,100,0.15527950310559005
+2024,Property and deception,Charges laid,56357,0.22438505824925745
+2024,Property and deception,No charges laid,16879,0.06720363749293284
+2024,Property and deception,Unsolved,177926,0.7084113042578097
+2024,Public order and security,Charges laid,9115,0.5965704561816872
+2024,Public order and security,No charges laid,4664,0.3052555795536357
+2024,Public order and security,Unsolved,1500,0.098173964264677
+2025,Crimes against the person,Charges laid,36904,0.483714102211212
+2025,Crimes against the person,No charges laid,26655,0.3493767449176202
+2025,Crimes against the person,Unsolved,12734,0.16690915287116773
+2025,Drug offences,Charges laid,10923,0.6940967147486814
+2025,Drug offences,No charges laid,4311,0.2739403952468704
+2025,Drug offences,Unsolved,503,0.031962890004448116
+2025,Justice procedures,Charges laid,42760,0.7530422837821179
+2025,Justice procedures,No charges laid,7475,0.13164151242449323
+2025,Justice procedures,Unsolved,6548,0.11531620379338886
+2025,Other offences,Charges laid,407,0.5575342465753425
+2025,Other offences,No charges laid,207,0.28356164383561644
+2025,Other offences,Unsolved,116,0.1589041095890411
+2025,Property and deception,Charges laid,70238,0.22212453749090794
+2025,Property and deception,No charges laid,18669,0.05903987856171532
+2025,Property and deception,Unsolved,227303,0.7188355839473768
+2025,Public order and security,Charges laid,10310,0.6293877052682987
+2025,Public order and security,No charges laid,3882,0.23698186923875222
+2025,Public order and security,Unsolved,2189,0.13363042549294915
+2026,Crimes against the person,Charges laid,29161,0.38571730906589774
+2026,Crimes against the person,No charges laid,27715,0.3665908309303987
+2026,Crimes against the person,Unsolved,18726,0.2476918600037036
+2026,Drug offences,Charges laid,9481,0.6046170524838977
+2026,Drug offences,No charges laid,5122,0.3266373318028187
+2026,Drug offences,Unsolved,1078,0.0687456157132836
+2026,Justice procedures,Charges laid,44476,0.6854694531779791
+2026,Justice procedures,No charges laid,10147,0.15638678256580976
+2026,Justice procedures,Unsolved,10261,0.15814376425621107
+2026,Other offences,Charges laid,306,0.45671641791044776
+2026,Other offences,No charges laid,260,0.3880597014925373
+2026,Other offences,Unsolved,104,0.15522388059701492
+2026,Property and deception,Charges laid,49350,0.16778751674475217
+2026,Property and deception,No charges laid,20260,0.06888298053188813
+2026,Property and deception,Unsolved,224512,0.7633295027233596
+2026,Public order and security,Charges laid,9702,0.5670036818420899
+2026,Public order and security,No charges laid,4892,0.28589796037636606
+2026,Public order and security,Unsolved,2517,0.14709835778154404

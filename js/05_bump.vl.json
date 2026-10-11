@@ -1,0 +1,241 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Rank of the ten most common offence subgroups in 2026, by year.",
+  "data": {
+    "url": "data/subgroup_rank.csv"
+  },
+  "transform": [
+    {
+      "calculate": "indexof([\"Steal from a retail store\", \"Motor vehicle theft\", \"Residential non-aggravated burglary\"], datum.subgroup) >= 0 ? datum.subgroup : 'Other'",
+      "as": "group"
+    },
+    {
+      "calculate": "datum.subgroup == 'Residential non-aggravated burglary' ? 'Home burglary (no violence)' : datum.subgroup == 'Non-residential non-aggravated burglary' ? 'Business burglary (no violence)' : datum.subgroup == 'Obtain benefit by deception' ? 'Fraud (obtain benefit by deception)' : datum.subgroup",
+      "as": "name"
+    }
+  ],
+  "width": 420,
+  "height": 380,
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "ordinal",
+      "title": "Year ending June",
+      "axis": {
+        "labelAngle": 0,
+        "domain": false,
+        "ticks": false
+      }
+    },
+    "y": {
+      "field": "rank",
+      "type": "quantitative",
+      "title": "Rank (1 = most common)",
+      "scale": {
+        "reverse": true,
+        "domain": [
+          1,
+          14
+        ],
+        "nice": false
+      },
+      "axis": {
+        "values": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "grid": false
+      }
+    },
+    "detail": {
+      "field": "subgroup"
+    },
+    "color": {
+      "field": "group",
+      "type": "nominal",
+      "legend": null,
+      "scale": {
+        "domain": [
+          "Steal from a retail store",
+          "Motor vehicle theft",
+          "Residential non-aggravated burglary",
+          "Other"
+        ],
+        "range": [
+          "#b3261e",
+          "#c07a1d",
+          "#1f3a5f",
+          "#c9c4b8"
+        ]
+      }
+    },
+    "tooltip": [
+      {
+        "field": "name",
+        "title": "Offence"
+      },
+      {
+        "field": "year",
+        "title": "Year ending June"
+      },
+      {
+        "field": "rank",
+        "title": "Rank"
+      },
+      {
+        "field": "incidents",
+        "title": "Incidents",
+        "format": ","
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "interpolate": "monotone"
+      },
+      "encoding": {
+        "strokeWidth": {
+          "condition": {
+            "test": "datum.group != 'Other'",
+            "value": 3.5
+          },
+          "value": 2
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "circle",
+        "size": 70,
+        "opacity": 1
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.year == 2026 && datum.group == 'Other'"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 10,
+        "fontSize": 12.5,
+        "color": "#545c6b"
+      },
+      "encoding": {
+        "text": {
+          "field": "name"
+        },
+        "color": {
+          "value": "#545c6b"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.year == 2026 && datum.group != 'Other'"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 10,
+        "fontSize": 12.5,
+        "fontWeight": 700
+      },
+      "encoding": {
+        "text": {
+          "field": "name"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.year == 2021 && datum.subgroup == 'Steal from a retail store'"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "dy": 22,
+        "align": "center",
+        "fontWeight": 700,
+        "color": "#b3261e",
+        "fontSize": 11.5
+      },
+      "encoding": {
+        "text": {
+          "value": [
+            "Shops closed in",
+            "lockdown: down to #10"
+          ]
+        }
+      }
+    }
+  ],
+  "config": {
+    "font": "Archivo",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Archivo",
+      "titleFont": "Archivo",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": 600,
+      "labelColor": "#545c6b",
+      "titleColor": "#545c6b",
+      "domainColor": "#c9c4b8",
+      "tickColor": "#c9c4b8",
+      "gridColor": "#ece8df"
+    },
+    "axisQuantitative": {
+      "format": ",.0f"
+    },
+    "legend": {
+      "labelFont": "Archivo",
+      "titleFont": "Archivo",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": 600,
+      "labelColor": "#545c6b",
+      "titleColor": "#1d2433"
+    },
+    "header": {
+      "labelFont": "Archivo",
+      "titleFont": "Archivo",
+      "labelFontSize": 13,
+      "labelFontWeight": 600,
+      "labelColor": "#1d2433"
+    },
+    "text": {
+      "font": "Archivo",
+      "fontSize": 12,
+      "color": "#1d2433"
+    },
+    "title": {
+      "font": "Archivo",
+      "fontSize": 14,
+      "fontWeight": 700,
+      "color": "#1d2433",
+      "anchor": "start"
+    }
+  }
+}

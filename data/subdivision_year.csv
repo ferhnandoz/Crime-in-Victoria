@@ -1,0 +1,281 @@
+year,division,subdivision,incidents,rate,index
+2017,Crimes against the person,Homicide and related offences,169,2.6814296559999997,100.0
+2017,Crimes against the person,Assault and related offences,39045,619.505449172,100.0
+2017,Crimes against the person,Sexual offences,7622,120.93406412,100.0
+2017,Crimes against the person,Abduction and related offences,437,6.933637631,100.0
+2017,Crimes against the person,Robbery,2468,39.158392843,100.0
+2017,Crimes against the person,Blackmail and extortion,139,2.2054362259999998,100.0
+2017,Crimes against the person,"Stalking, harassment and threatening behaviour",6774,107.47931649899999,100.0
+2017,Crimes against the person,Dangerous and negligent acts endangering people,4416,70.0662329,100.0
+2017,Drug offences,Drug dealing and trafficking,2951,46.821887067,100.0
+2017,Drug offences,Cultivate or manufacture drugs,1051,16.675636498,100.0
+2017,Drug offences,Drug use and possession,11494,182.368949489,100.00000000000001
+2017,Drug offences,Other drug offences,8,0.126931581,100.0
+2017,Justice procedures,Justice procedures,7986,126.709451072,100.0
+2017,Justice procedures,Breaches of orders,38767,615.0945767210001,100.0
+2017,Other offences,Regulatory driving offences,8,0.126931582,100.0
+2017,Other offences,Transport regulation offences,368,5.838852741,100.00000000000001
+2017,Other offences,Other government regulatory offences,188,2.98289216,100.0
+2017,Other offences,Miscellaneous offences,208,3.3002211150000003,100.00000000000001
+2017,Property and deception,Arson,3093,49.074922636,99.99999999999999
+2017,Property and deception,Property damage,36919,585.7733814320001,100.0
+2017,Property and deception,Burglary/Break and enter,49303,782.263469345,100.00000000000001
+2017,Property and deception,Theft,145663,2311.154366572,100.0
+2017,Property and deception,Deception,21389,339.36744915800006,100.00000000000001
+2017,Property and deception,Bribery,6,0.095198686,100.0
+2017,Public order and security,Weapons and explosives offences,9430,149.620601504,100.0
+2017,Public order and security,Disorderly and offensive conduct,13372,212.166138209,100.0
+2017,Public order and security,Public nuisance offences,1888,29.955853196,100.0
+2017,Public order and security,Public security offences,29,0.460126982,100.0
+2018,Crimes against the person,Homicide and related offences,181,2.817981149,105.09248835577137
+2018,Crimes against the person,Assault and related offences,39246,611.019271566,98.63016901347
+2018,Crimes against the person,Sexual offences,8536,132.896613721,109.89179491158905
+2018,Crimes against the person,Abduction and related offences,400,6.227582649,89.81696160694558
+2018,Crimes against the person,Robbery,2481,38.626581378,98.6418965989431
+2018,Crimes against the person,Blackmail and extortion,132,2.055102274,93.18348224139491
+2018,Crimes against the person,"Stalking, harassment and threatening behaviour",6849,106.6317839,99.21144586083419
+2018,Crimes against the person,Dangerous and negligent acts endangering people,4230,65.856686508,93.99204692792895
+2018,Drug offences,Drug dealing and trafficking,2853,44.418233241,94.86638839959511
+2018,Drug offences,Cultivate or manufacture drugs,970,15.101887923,90.56258766980949
+2018,Drug offences,Drug use and possession,11136,173.37590093699998,95.06876111465321
+2018,Drug offences,Other drug offences,11,0.171258523,134.92191750136635
+2018,Justice procedures,Justice procedures,7375,114.82105508400001,90.61759333071006
+2018,Justice procedures,Breaches of orders,39690,617.931888306,100.46128053999847
+2018,Other offences,Regulatory driving offences,5,0.077844783,61.32814369240273
+2018,Other offences,Transport regulation offences,222,3.456308369,59.194991247682154
+2018,Other offences,Other government regulatory offences,195,3.035946541,101.77862216111762
+2018,Other offences,Miscellaneous offences,243,3.78325646,114.63645398802315
+2018,Property and deception,Arson,3147,48.995506488000004,99.83817366643846
+2018,Property and deception,Property damage,35536,553.2584425,94.44922900857786
+2018,Property and deception,Burglary/Break and enter,41129,640.335616884,81.85677102117039
+2018,Property and deception,Theft,132399,2061.314287724,89.18981429965784
+2018,Property and deception,Deception,20736,322.83788450199995,95.12930167668956
+2018,Property and deception,Bribery,3,0.04670687,49.06251542169395
+2018,Public order and security,Weapons and explosives offences,8952,139.37329967600002,93.15114247303302
+2018,Public order and security,Disorderly and offensive conduct,12900,200.839540416,94.66144885860984
+2018,Public order and security,Public nuisance offences,2027,31.558275071999997,105.34927803763563
+2018,Public order and security,Public security offences,44,0.685034091,148.8793567424394
+2019,Crimes against the person,Homicide and related offences,174,2.6616472690000004,99.26224478961312
+2019,Crimes against the person,Assault and related offences,40759,623.4832243559999,100.64208881282907
+2019,Crimes against the person,Sexual offences,8257,126.305870692,104.44193008073366
+2019,Crimes against the person,Abduction and related offences,452,6.914164169999999,99.71914510050344
+2019,Crimes against the person,Robbery,2725,41.683843725,106.44932209584147
+2019,Crimes against the person,Blackmail and extortion,175,2.676944093,121.37934715324661
+2019,Crimes against the person,"Stalking, harassment and threatening behaviour",7241,110.764298132,103.0563849306118
+2019,Crimes against the person,Dangerous and negligent acts endangering people,4037,61.753276006,88.13557322845595
+2019,Drug offences,Drug dealing and trafficking,2998,45.859876508999996,97.94538277232738
+2019,Drug offences,Cultivate or manufacture drugs,1123,17.178332662000003,103.01455458123169
+2019,Drug offences,Drug use and possession,12070,184.63265825899998,101.24127971145468
+2019,Drug offences,Other drug offences,6,0.09178094,72.30741102956875
+2019,Justice procedures,Justice procedures,7818,119.59056522399999,94.38172465607569
+2019,Justice procedures,Breaches of orders,41669,637.4033336360001,103.62688239488722
+2019,Other offences,Regulatory driving offences,13,0.198858704,156.66605652169372
+2019,Other offences,Transport regulation offences,263,4.02306455,68.90162722807398
+2019,Other offences,Other government regulatory offences,170,2.600459975,87.1791481392341
+2019,Other offences,Miscellaneous offences,313,4.7879057199999995,145.07833121357382
+2019,Property and deception,Arson,2925,44.74320840199999,91.17326324459168
+2019,Property and deception,Property damage,33546,513.147237279,87.60166534446208
+2019,Property and deception,Burglary/Break and enter,36411,556.972636278,71.20013372788083
+2019,Property and deception,Theft,136668,2090.586258406,90.45636624899461
+2019,Property and deception,Deception,22391,342.511172418,100.926347906318
+2019,Property and deception,Bribery,6,0.09178094,96.40988111957763
+2019,Public order and security,Weapons and explosives offences,9657,147.721423431,98.730670740587
+2019,Public order and security,Disorderly and offensive conduct,11770,180.04361124300002,84.85972962643227
+2019,Public order and security,Public nuisance offences,2087,31.924470405999998,106.5717280596864
+2019,Public order and security,Public security offences,36,0.550685642,119.68123225601232
+2020,Crimes against the person,Homicide and related offences,195,2.947825306,109.93483641847213
+2020,Crimes against the person,Assault and related offences,41958,634.281303561,102.38510482978779
+2020,Crimes against the person,Sexual offences,8291,125.335485195,103.63952134332686
+2020,Crimes against the person,Abduction and related offences,444,6.7119714660000005,96.8030321629596
+2020,Crimes against the person,Robbery,2976,44.988349287,114.88814024460703
+2020,Crimes against the person,Blackmail and extortion,155,2.343143192,106.24397860054015
+2020,Crimes against the person,"Stalking, harassment and threatening behaviour",7385,111.63943531299999,103.87062269235655
+2020,Crimes against the person,Dangerous and negligent acts endangering people,3909,59.092559598,84.33814285739913
+2020,Drug offences,Drug dealing and trafficking,3353,50.687478212,108.25594905961077
+2020,Drug offences,Cultivate or manufacture drugs,1254,18.956784276,113.67952448635823
+2020,Drug offences,Drug use and possession,13345,201.73707030900002,110.62029521706943
+2020,Drug offences,Other drug offences,3,0.045351159,35.72882228576354
+2020,Justice procedures,Justice procedures,8239,124.549398447,98.29527110509493
+2020,Justice procedures,Breaches of orders,45166,682.776809111,111.00354887711843
+2020,Other offences,Regulatory driving offences,8,0.120936423,95.27685789026093
+2020,Other offences,Transport regulation offences,199,3.008293518,51.521996725075475
+2020,Other offences,Other government regulatory offences,200,3.0234105700000002,101.35835986776003
+2020,Other offences,Miscellaneous offences,6226,94.118771055,2851.892881577421
+2020,Property and deception,Arson,2352,35.555308308,72.45107357931445
+2020,Property and deception,Property damage,34936,528.129358435,90.15933041271325
+2020,Property and deception,Burglary/Break and enter,38027,574.8561688000001,73.48626023420665
+2020,Property and deception,Theft,145899,2205.562894044,95.43122371853431
+2020,Property and deception,Deception,22151,334.857837723,98.67117148501166
+2020,Property and deception,Bribery,2,0.030234106,31.75895305949916
+2020,Public order and security,Weapons and explosives offences,9453,142.90150061,95.50924082214682
+2020,Public order and security,Disorderly and offensive conduct,8353,126.27274247199999,59.515973443232305
+2020,Public order and security,Public nuisance offences,2107,31.851630359,106.32857008143284
+2020,Public order and security,Public security offences,35,0.52909685,114.98931179828092
+2021,Crimes against the person,Homicide and related offences,162,2.47410513,92.26813481621313
+2021,Crimes against the person,Assault and related offences,41896,639.846348907,103.28340933274866
+2021,Crimes against the person,Sexual offences,8714,133.082420383,110.04543786020906
+2021,Crimes against the person,Abduction and related offences,416,6.353257617000001,91.62950178698199
+2021,Crimes against the person,Robbery,1896,28.956193372,73.94632738911358
+2021,Crimes against the person,Blackmail and extortion,173,2.642099923,119.79942524985078
+2021,Crimes against the person,"Stalking, harassment and threatening behaviour",8038,122.758376755,114.2158144968685
+2021,Crimes against the person,Dangerous and negligent acts endangering people,3994,60.99738203,87.05674546119347
+2021,Drug offences,Drug dealing and trafficking,3223,49.222474283000004,105.12706207796553
+2021,Drug offences,Cultivate or manufacture drugs,1670,25.504663993,152.94567014613753
+2021,Drug offences,Drug use and possession,11664,178.135569354,97.67867274178967
+2021,Drug offences,Other drug offences,5,0.076361269,60.159393271876134
+2021,Justice procedures,Justice procedures,8312,126.94297432100001,100.18429820903202
+2021,Justice procedures,Breaches of orders,45441,693.9864889429999,112.8259807853556
+2021,Other offences,Regulatory driving offences,15,0.229083809,180.47817996942638
+2021,Other offences,Transport regulation offences,141,2.153387799,36.88032383278083
+2021,Other offences,Other government regulatory offences,171,2.6115554139999997,87.55111730220912
+2021,Other offences,Miscellaneous offences,31896,487.123810024,14760.338566708431
+2021,Property and deception,Arson,1906,29.108915911,59.31525583220483
+2021,Property and deception,Property damage,31733,484.63443264,82.73411663999607
+2021,Property and deception,Burglary/Break and enter,28484,435.014879757,55.60976535453509
+2021,Property and deception,Theft,109236,1668.279925753,72.18383808033828
+2021,Property and deception,Deception,20472,312.653581604,92.12833534262656
+2021,Property and deception,Bribery,2,0.030544508,32.085010080916454
+2021,Public order and security,Weapons and explosives offences,9189,140.33674098,93.7950653648777
+2021,Public order and security,Disorderly and offensive conduct,6429,98.185320248,46.277563930244085
+2021,Public order and security,Public nuisance offences,1977,30.193245938,100.79247531508032
+2021,Public order and security,Public security offences,28,0.427623109,92.93589068419378
+2022,Crimes against the person,Homicide and related offences,172,2.600059984,96.96543700790636
+2022,Crimes against the person,Assault and related offences,41324,624.67952749,100.8351949647764
+2022,Crimes against the person,Sexual offences,8781,132.739108772,109.76155456107564
+2022,Crimes against the person,Abduction and related offences,417,6.303633795,90.91380499633728
+2022,Crimes against the person,Robbery,1721,26.015716455,66.4371404600447
+2022,Crimes against the person,Blackmail and extortion,243,3.673340557,166.55845740152455
+2022,Crimes against the person,"Stalking, harassment and threatening behaviour",7685,116.171284695,108.0871078074644
+2022,Crimes against the person,Dangerous and negligent acts endangering people,4203,63.535186673,90.67875357831603
+2022,Drug offences,Drug dealing and trafficking,2417,36.536889409000004,78.03378227092252
+2022,Drug offences,Cultivate or manufacture drugs,1333,20.150464866999997,120.83775554484383
+2022,Drug offences,Drug use and possession,9645,145.799875197,79.94775185443193
+2022,Drug offences,Other drug offences,19,0.287215928,226.27617629689811
+2022,Justice procedures,Justice procedures,7878,119.088793862,93.98572312836419
+2022,Justice procedures,Breaches of orders,43842,662.7431963079999,107.74655173209447
+2022,Other offences,Regulatory driving offences,11,0.16628290599999998,131.0019960201867
+2022,Other offences,Transport regulation offences,189,2.857042656,48.93157582033288
+2022,Other offences,Other government regulatory offences,122,1.844228591,61.82686104884194
+2022,Other offences,Miscellaneous offences,9654,145.935924848,4422.004458570953
+2022,Property and deception,Arson,1953,29.522774107,60.1585749324094
+2022,Property and deception,Property damage,31734,479.711066822,81.8936267894733
+2022,Property and deception,Burglary/Break and enter,27176,410.80947727800003,52.51548786011656
+2022,Property and deception,Theft,105840,1599.943887078,69.2270455932852
+2022,Property and deception,Deception,16997,256.937322833,75.71065624310278
+2022,Property and deception,Bribery,3,0.045349883,47.63708923461402
+2022,Public order and security,Weapons and explosives offences,8663,130.955346691,87.52494333977062
+2022,Public order and security,Disorderly and offensive conduct,6091,92.07537997200001,43.39777343795487
+2022,Public order and security,Public nuisance offences,1931,29.190208295,97.44408915349393
+2022,Public order and security,Public security offences,23,0.347682439,75.56228010988497
+2023,Crimes against the person,Homicide and related offences,174,2.559889271,95.46732897773246
+2023,Crimes against the person,Assault and related offences,42789,629.512080691,101.61526125918253
+2023,Crimes against the person,Sexual offences,8966,131.907857521,109.07419549723473
+2023,Crimes against the person,Abduction and related offences,379,5.575850770000001,80.41739512129402
+2023,Crimes against the person,Robbery,2250,33.102016443000004,84.53364410464398
+2023,Crimes against the person,Blackmail and extortion,610,8.974324457,406.9183389300145
+2023,Crimes against the person,"Stalking, harassment and threatening behaviour",7555,111.14921521,103.41451623488335
+2023,Crimes against the person,Dangerous and negligent acts endangering people,4087,60.127973867,85.81590786080352
+2023,Drug offences,Drug dealing and trafficking,2291,33.705208741999996,71.9860109306773
+2023,Drug offences,Cultivate or manufacture drugs,1636,24.068843955,144.33538388706606
+2023,Drug offences,Drug use and possession,9831,144.633743842,79.30831660064145
+2023,Drug offences,Other drug offences,5,0.073560037,57.95250986434968
+2023,Justice procedures,Justice procedures,7794,114.665384957,90.49473735928649
+2023,Justice procedures,Breaches of orders,50021,735.9093175419999,119.64165274632231
+2023,Other offences,Regulatory driving offences,13,0.191256095,150.67652351484912
+2023,Other offences,Transport regulation offences,248,3.648577813,62.4879231390775
+2023,Other offences,Other government regulatory offences,113,1.662456824,55.73305150931102
+2023,Other offences,Miscellaneous offences,326,4.796114382,145.32706188082187
+2023,Property and deception,Arson,2040,30.012494908,61.156479309421606
+2023,Property and deception,Property damage,33339,490.483611633,83.73265620809678
+2023,Property and deception,Burglary/Break and enter,34206,503.23892197,64.33112904931748
+2023,Property and deception,Theft,124889,1837.367880658,79.50000688977173
+2023,Property and deception,Deception,19574,287.972831041,84.85576084432536
+2023,Property and deception,Bribery,1,0.014712007,15.454002169735828
+2023,Public order and security,Weapons and explosives offences,9036,132.937698033,88.84986204887433
+2023,Public order and security,Disorderly and offensive conduct,6025,88.639844029,41.77850658792824
+2023,Public order and security,Public nuisance offences,2248,33.072592427000004,110.40444153136717
+2023,Public order and security,Public security offences,35,0.5149202549999999,111.90829382833279
+2024,Crimes against the person,Homicide and related offences,195,2.805367488,104.62208030416444
+2024,Crimes against the person,Assault and related offences,43858,630.9631143070001,101.84948577132192
+2024,Crimes against the person,Sexual offences,10309,148.310427868,122.63742969957174
+2024,Crimes against the person,Abduction and related offences,390,5.610734977,80.92051064097497
+2024,Crimes against the person,Robbery,2669,38.397568336,98.0570589042037
+2024,Crimes against the person,Blackmail and extortion,361,5.193526478,235.48749298543538
+2024,Crimes against the person,"Stalking, harassment and threatening behaviour",7958,114.48776651200001,106.52074300553002
+2024,Crimes against the person,Dangerous and negligent acts endangering people,4089,58.826398249,83.95827178686525
+2024,Drug offences,Drug dealing and trafficking,2380,34.239869854,73.12791516711896
+2024,Drug offences,Cultivate or manufacture drugs,1902,27.363122884,164.0904254975923
+2024,Drug offences,Drug use and possession,10360,149.044139364,81.72670829196717
+2024,Drug offences,Other drug offences,11,0.158251499,124.67464578417251
+2024,Justice procedures,Justice procedures,8237,118.50159999499999,93.5223055521438
+2024,Justice procedures,Breaches of orders,48986,704.737085995,114.5737765648779
+2024,Other offences,Regulatory driving offences,18,0.258956999,204.0130556318128
+2024,Other offences,Transport regulation offences,230,3.308894986,56.670293511003955
+2024,Other offences,Other government regulatory offences,157,2.25868049,75.72115815276406
+2024,Other offences,Miscellaneous offences,239,3.438373486,104.18615499343595
+2024,Property and deception,Arson,2625,37.764562339,76.95287187533326
+2024,Property and deception,Property damage,37283,536.3718772130001,91.56644774499115
+2024,Property and deception,Burglary/Break and enter,38253,550.326782155,70.35056649338314
+2024,Property and deception,Theft,153890,2213.938475557,95.79362190509175
+2024,Property and deception,Deception,19108,274.897240829,81.00283085812849
+2024,Property and deception,Bribery,3,0.0431595,45.336234998033476
+2024,Public order and security,Weapons and explosives offences,9098,130.888376441,87.48018329380983
+2024,Public order and security,Disorderly and offensive conduct,3705,53.30198227299999,25.1227564977845
+2024,Public order and security,Public nuisance offences,2452,35.275697849000004,117.75894887116873
+2024,Public order and security,Public security offences,24,0.34527599900000006,75.03928535101643
+2025,Crimes against the person,Homicide and related offences,215,3.039359422,113.34846749378983
+2025,Crimes against the person,Assault and related offences,48448,684.887838449,110.55396516114375
+2025,Crimes against the person,Sexual offences,10343,146.214393021,120.90422502952927
+2025,Crimes against the person,Abduction and related offences,475,6.714863837999999,96.8447472359693
+2025,Crimes against the person,Robbery,3091,43.696092896,111.58806509550395
+2025,Crimes against the person,Blackmail and extortion,381,5.386027627000001,244.21597702549036
+2025,Crimes against the person,"Stalking, harassment and threatening behaviour",8787,124.21791274200001,115.57378367135016
+2025,Crimes against the person,Dangerous and negligent acts endangering people,4553,64.363736964,91.86127796518085
+2025,Drug offences,Drug dealing and trafficking,2111,29.842268554999997,63.73572366337363
+2025,Drug offences,Cultivate or manufacture drugs,1869,26.421222136,158.4420609022561
+2025,Drug offences,Drug use and possession,11751,166.118663095,91.08933486784153
+2025,Drug offences,Other drug offences,6,0.084819333,66.8228760185379
+2025,Justice procedures,Justice procedures,9779,138.241375748,109.10107697447701
+2025,Justice procedures,Breaches of orders,47004,664.4746523790001,108.02804601549889
+2025,Other offences,Regulatory driving offences,23,0.325140776,256.1543556590983
+2025,Other offences,Transport regulation offences,260,3.675504417,62.94908572005721
+2025,Other offences,Other government regulatory offences,221,3.124178753,104.73656389240702
+2025,Other offences,Miscellaneous offences,226,3.194861531,96.80749924539523
+2025,Property and deception,Arson,3672,51.909431612999995,105.77588068355034
+2025,Property and deception,Property damage,41431,585.691628855,99.9860436510788
+2025,Property and deception,Burglary/Break and enter,45771,647.0442795089999,82.71436732828379
+2025,Property and deception,Theft,205859,2910.137168411,125.91704000834164
+2025,Property and deception,Deception,19474,275.29528083499997,81.12011965733052
+2025,Property and deception,Bribery,3,0.042409666,44.54858337015282
+2025,Public order and security,Weapons and explosives offences,9991,141.238325502,94.39764583370165
+2025,Public order and security,Disorderly and offensive conduct,3171,44.827017332,21.128261894384828
+2025,Public order and security,Public nuisance offences,2943,41.60388269,138.88398510230166
+2025,Public order and security,Public security offences,276,3.901689303,847.9592494317144
+2026,Crimes against the person,Homicide and related offences,200,2.779156519,103.64458052372642
+2026,Crimes against the person,Assault and related offences,47381,658.396075104,106.27768907989095
+2026,Crimes against the person,Sexual offences,10761,149.532516499,123.6479709725313
+2026,Crimes against the person,Abduction and related offences,424,5.89181182,84.97432565062182
+2026,Crimes against the person,Robbery,2407,33.447148705000004,85.41501904611249
+2026,Crimes against the person,Blackmail and extortion,420,5.836228689,264.62922029648394
+2026,Crimes against the person,"Stalking, harassment and threatening behaviour",9392,130.509190128,121.42726096440545
+2026,Crimes against the person,Dangerous and negligent acts endangering people,4617,64.156828238,91.56597348335534
+2026,Drug offences,Drug dealing and trafficking,2343,32.557818618,69.53546868243743
+2026,Drug offences,Cultivate or manufacture drugs,1916,26.624319450999998,159.65998931550948
+2026,Drug offences,Drug use and possession,11416,158.634254098,86.98534182627861
+2026,Drug offences,Other drug offences,6,0.083374696,65.68475342633604
+2026,Justice procedures,Justice procedures,10018,139.207950031,109.86390427332685
+2026,Justice procedures,Breaches of orders,54866,762.406007823,123.94939521126987
+2026,Other offences,Regulatory driving offences,13,0.18064517400000002,142.31696411063407
+2026,Other offences,Transport regulation offences,283,3.932506474,67.3506705587251
+2026,Other offences,Other government regulatory offences,165,2.2928041279999998,76.86513641847513
+2026,Other offences,Miscellaneous offences,209,2.904218561,88.00072661191976
+2026,Property and deception,Arson,3324,46.189581344000004,94.12053827695006
+2026,Property and deception,Property damage,39665,551.176216606,94.09376289147474
+2026,Property and deception,Burglary/Break and enter,36818,511.61492356,65.40186824630611
+2026,Property and deception,Theft,192355,2672.923260944,115.65316880622694
+2026,Property and deception,Deception,21953,305.054115296,89.88903209570205
+2026,Property and deception,Bribery,7,0.097270478,102.17628213902027
+2026,Public order and security,Weapons and explosives offences,10345,143.751870938,96.07759191781948
+2026,Public order and security,Disorderly and offensive conduct,3491,48.510177037,22.864240941791444
+2026,Public order and security,Public nuisance offences,3021,41.979159217,140.1367503784051
+2026,Public order and security,Public security offences,254,3.52952878,767.0771152472862

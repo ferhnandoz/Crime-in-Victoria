@@ -1,0 +1,253 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "ABS disadvantage score (2021) against crime rate (2026) for every Victorian council.",
+  "data": {
+    "url": "data/lga.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "irsd_score": "number",
+        "rate": "number",
+        "population": "number"
+      }
+    }
+  },
+  "transform": [
+    {
+      "calculate": "datum.metro == 'True' || datum.metro == true ? 'Metropolitan Melbourne' : 'Regional Victoria'",
+      "as": "area"
+    }
+  ],
+  "width": "container",
+  "height": 380,
+  "encoding": {
+    "x": {
+      "field": "irsd_score",
+      "type": "quantitative",
+      "scale": {
+        "reverse": true,
+        "domain": [
+          880,
+          1100
+        ]
+      },
+      "title": "ABS disadvantage score (2021)   \u2190 less disadvantaged \u00b7 more disadvantaged \u2192"
+    },
+    "y": {
+      "field": "rate",
+      "type": "quantitative",
+      "title": "Incidents per 100,000 people (2026)",
+      "axis": {
+        "format": ",.0f"
+      }
+    }
+  },
+  "layer": [
+    {
+      "transform": [
+        {
+          "regression": "rate",
+          "on": "irsd_score"
+        }
+      ],
+      "mark": {
+        "type": "line",
+        "color": "#545c6b",
+        "strokeDash": [
+          6,
+          4
+        ],
+        "strokeWidth": 1.5
+      }
+    },
+    {
+      "mark": {
+        "type": "circle",
+        "stroke": "#ffffff",
+        "strokeWidth": 0.8
+      },
+      "params": [
+        {
+          "name": "hover",
+          "select": {
+            "type": "point",
+            "on": "mouseover",
+            "fields": [
+              "lga"
+            ],
+            "clear": "mouseout"
+          }
+        }
+      ],
+      "encoding": {
+        "size": {
+          "field": "population",
+          "type": "quantitative",
+          "title": "Population",
+          "scale": {
+            "range": [
+              25,
+              600
+            ]
+          },
+          "legend": {
+            "labelExpr": "format(datum.value, ',')",
+            "values": [
+              10000,
+              100000,
+              300000
+            ]
+          }
+        },
+        "color": {
+          "field": "area",
+          "type": "nominal",
+          "title": null,
+          "scale": {
+            "domain": [
+              "Metropolitan Melbourne",
+              "Regional Victoria"
+            ],
+            "range": [
+              "#1f3a5f",
+              "#c07a1d"
+            ]
+          }
+        },
+        "opacity": {
+          "condition": {
+            "param": "hover",
+            "empty": true,
+            "value": 0.85
+          },
+          "value": 0.25
+        },
+        "tooltip": [
+          {
+            "field": "lga",
+            "title": "Council"
+          },
+          {
+            "field": "rate",
+            "title": "Per 100,000 people",
+            "format": ",.0f"
+          },
+          {
+            "field": "irsd_score",
+            "title": "Disadvantage score",
+            "format": ".0f"
+          },
+          {
+            "field": "disadvantage",
+            "title": "Group"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": {
+            "field": "lga",
+            "oneOf": [
+              "Melbourne",
+              "Latrobe",
+              "Greater Dandenong",
+              "Mildura",
+              "Brimbank",
+              "Nillumbik",
+              "Boroondara",
+              "Queenscliffe",
+              "Yarra"
+            ]
+          }
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 9,
+        "fontSize": 11.5,
+        "fontWeight": 600
+      },
+      "encoding": {
+        "text": {
+          "field": "lga"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.lga == 'Melbourne'"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 12,
+        "dy": 26,
+        "fontSize": 11.5,
+        "color": "#545c6b",
+        "fontStyle": "italic"
+      },
+      "encoding": {
+        "text": {
+          "value": [
+            "The city's rate looks high because millions of workers",
+            "and visitors pass through, but only residents are counted."
+          ]
+        }
+      }
+    }
+  ],
+  "config": {
+    "font": "Archivo",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Archivo",
+      "titleFont": "Archivo",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": 600,
+      "labelColor": "#545c6b",
+      "titleColor": "#545c6b",
+      "domainColor": "#c9c4b8",
+      "tickColor": "#c9c4b8",
+      "gridColor": "#ece8df"
+    },
+    "axisQuantitative": {
+      "format": ",.0f"
+    },
+    "legend": {
+      "labelFont": "Archivo",
+      "titleFont": "Archivo",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": 600,
+      "labelColor": "#545c6b",
+      "titleColor": "#1d2433"
+    },
+    "header": {
+      "labelFont": "Archivo",
+      "titleFont": "Archivo",
+      "labelFontSize": 13,
+      "labelFontWeight": 600,
+      "labelColor": "#1d2433"
+    },
+    "text": {
+      "font": "Archivo",
+      "fontSize": 12,
+      "color": "#1d2433"
+    },
+    "title": {
+      "font": "Archivo",
+      "fontSize": 14,
+      "fontWeight": 700,
+      "color": "#1d2433",
+      "anchor": "start"
+    }
+  }
+}

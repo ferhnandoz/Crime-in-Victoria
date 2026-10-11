@@ -1,0 +1,317 @@
+lga,division,rate
+Alpine,Crimes against the person,617.9
+Alpine,Property and deception,1386.4
+Alpine,Drug offences,82.9
+Alpine,Public order and security,226.0
+Ararat,Crimes against the person,2030.5
+Ararat,Property and deception,4543.3
+Ararat,Drug offences,355.3
+Ararat,Public order and security,516.1
+Ballarat,Crimes against the person,1493.6
+Ballarat,Property and deception,6063.1
+Ballarat,Drug offences,199.5
+Ballarat,Public order and security,292.8
+Banyule,Crimes against the person,751.1
+Banyule,Property and deception,3281.4
+Banyule,Drug offences,210.9
+Banyule,Public order and security,200.4
+Bass Coast,Crimes against the person,1305.9
+Bass Coast,Property and deception,2478.7
+Bass Coast,Drug offences,212.8
+Bass Coast,Public order and security,261.6
+Baw Baw,Crimes against the person,1198.9
+Baw Baw,Property and deception,3142.5
+Baw Baw,Drug offences,287.2
+Baw Baw,Public order and security,268.5
+Bayside,Crimes against the person,423.6
+Bayside,Property and deception,2623.3
+Bayside,Drug offences,122.6
+Bayside,Public order and security,109.6
+Benalla,Crimes against the person,1295.5
+Benalla,Property and deception,3296.5
+Benalla,Drug offences,427.3
+Benalla,Public order and security,427.3
+Boroondara,Crimes against the person,504.3
+Boroondara,Property and deception,3479.2
+Boroondara,Drug offences,85.1
+Boroondara,Public order and security,103.5
+Brimbank,Crimes against the person,1068.3
+Brimbank,Property and deception,4764.7
+Brimbank,Drug offences,289.1
+Brimbank,Public order and security,274.5
+Buloke,Crimes against the person,786.5
+Buloke,Property and deception,3180.0
+Buloke,Drug offences,171.0
+Buloke,Public order and security,153.9
+Campaspe,Crimes against the person,1298.0
+Campaspe,Property and deception,4089.3
+Campaspe,Drug offences,192.6
+Campaspe,Public order and security,242.7
+Cardinia,Crimes against the person,943.6
+Cardinia,Property and deception,2892.3
+Cardinia,Drug offences,125.2
+Cardinia,Public order and security,155.9
+Casey,Crimes against the person,1074.8
+Casey,Property and deception,3431.9
+Casey,Drug offences,138.7
+Casey,Public order and security,149.9
+Central Goldfields,Crimes against the person,1610.4
+Central Goldfields,Property and deception,3010.5
+Central Goldfields,Drug offences,449.8
+Central Goldfields,Public order and security,420.7
+Colac-Otway,Crimes against the person,1180.4
+Colac-Otway,Property and deception,2865.5
+Colac-Otway,Drug offences,306.4
+Colac-Otway,Public order and security,319.9
+Corangamite,Crimes against the person,1079.0
+Corangamite,Property and deception,2183.6
+Corangamite,Drug offences,178.8
+Corangamite,Public order and security,338.4
+Darebin,Crimes against the person,883.2
+Darebin,Property and deception,5647.2
+Darebin,Drug offences,266.1
+Darebin,Public order and security,253.2
+East Gippsland,Crimes against the person,2288.7
+East Gippsland,Property and deception,3463.9
+East Gippsland,Drug offences,442.2
+East Gippsland,Public order and security,595.6
+Frankston,Crimes against the person,1219.2
+Frankston,Property and deception,4544.5
+Frankston,Drug offences,414.2
+Frankston,Public order and security,395.6
+Gannawarra,Crimes against the person,1184.6
+Gannawarra,Property and deception,2009.9
+Gannawarra,Drug offences,174.8
+Gannawarra,Public order and security,233.0
+Glen Eira,Crimes against the person,540.9
+Glen Eira,Property and deception,2677.0
+Glen Eira,Drug offences,94.8
+Glen Eira,Public order and security,100.3
+Glenelg,Crimes against the person,1845.7
+Glenelg,Property and deception,3200.0
+Glenelg,Drug offences,531.7
+Glenelg,Public order and security,536.7
+Golden Plains,Crimes against the person,478.4
+Golden Plains,Property and deception,1520.4
+Golden Plains,Drug offences,89.0
+Golden Plains,Public order and security,77.9
+Greater Bendigo,Crimes against the person,1436.7
+Greater Bendigo,Property and deception,3139.1
+Greater Bendigo,Drug offences,279.0
+Greater Bendigo,Public order and security,305.6
+Greater Dandenong,Crimes against the person,1560.7
+Greater Dandenong,Property and deception,6015.8
+Greater Dandenong,Drug offences,433.5
+Greater Dandenong,Public order and security,348.6
+Greater Geelong,Crimes against the person,1034.2
+Greater Geelong,Property and deception,3610.5
+Greater Geelong,Drug offences,227.2
+Greater Geelong,Public order and security,292.0
+Greater Shepparton,Crimes against the person,1851.2
+Greater Shepparton,Property and deception,5101.1
+Greater Shepparton,Drug offences,446.8
+Greater Shepparton,Public order and security,377.1
+Hepburn,Crimes against the person,523.3
+Hepburn,Property and deception,2697.9
+Hepburn,Drug offences,29.1
+Hepburn,Public order and security,104.7
+Hindmarsh,Crimes against the person,1000.3
+Hindmarsh,Property and deception,2346.1
+Hindmarsh,Drug offences,200.1
+Hindmarsh,Public order and security,236.4
+Hobsons Bay,Crimes against the person,788.3
+Hobsons Bay,Property and deception,4399.3
+Hobsons Bay,Drug offences,210.6
+Hobsons Bay,Public order and security,328.2
+Horsham,Crimes against the person,2269.1
+Horsham,Property and deception,3546.8
+Horsham,Drug offences,424.2
+Horsham,Public order and security,508.1
+Hume,Crimes against the person,1135.8
+Hume,Property and deception,3803.0
+Hume,Drug offences,182.8
+Hume,Public order and security,236.9
+Indigo,Crimes against the person,435.7
+Indigo,Property and deception,1525.1
+Indigo,Drug offences,83.8
+Indigo,Public order and security,139.7
+Kingston,Crimes against the person,664.0
+Kingston,Property and deception,3557.4
+Kingston,Drug offences,173.0
+Kingston,Public order and security,166.5
+Knox,Crimes against the person,716.2
+Knox,Property and deception,3256.5
+Knox,Drug offences,192.0
+Knox,Public order and security,157.9
+Latrobe,Crimes against the person,2554.0
+Latrobe,Property and deception,6596.7
+Latrobe,Drug offences,516.3
+Latrobe,Public order and security,507.5
+Loddon,Crimes against the person,851.8
+Loddon,Property and deception,3097.3
+Loddon,Drug offences,154.9
+Loddon,Public order and security,283.9
+Macedon Ranges,Crimes against the person,605.9
+Macedon Ranges,Property and deception,2171.3
+Macedon Ranges,Drug offences,119.7
+Macedon Ranges,Public order and security,161.4
+Manningham,Crimes against the person,500.1
+Manningham,Property and deception,2204.8
+Manningham,Drug offences,60.9
+Manningham,Public order and security,87.2
+Mansfield,Crimes against the person,595.1
+Mansfield,Property and deception,1334.4
+Mansfield,Drug offences,108.2
+Mansfield,Public order and security,171.3
+Maribyrnong,Crimes against the person,1162.5
+Maribyrnong,Property and deception,7844.0
+Maribyrnong,Drug offences,278.6
+Maribyrnong,Public order and security,373.6
+Maroondah,Crimes against the person,928.8
+Maroondah,Property and deception,3059.3
+Maroondah,Drug offences,262.1
+Maroondah,Public order and security,251.3
+Melbourne,Crimes against the person,2671.0
+Melbourne,Property and deception,11248.5
+Melbourne,Drug offences,602.5
+Melbourne,Public order and security,772.9
+Melton,Crimes against the person,857.6
+Melton,Property and deception,3214.7
+Melton,Drug offences,149.3
+Melton,Public order and security,142.9
+Merri-bek,Crimes against the person,872.5
+Merri-bek,Property and deception,4258.4
+Merri-bek,Drug offences,129.6
+Merri-bek,Public order and security,158.7
+Mildura,Crimes against the person,2303.8
+Mildura,Property and deception,5491.6
+Mildura,Drug offences,433.4
+Mildura,Public order and security,488.8
+Mitchell,Crimes against the person,1242.5
+Mitchell,Property and deception,2946.6
+Mitchell,Drug offences,403.7
+Mitchell,Public order and security,289.5
+Moira,Crimes against the person,1214.7
+Moira,Property and deception,2937.2
+Moira,Drug offences,205.7
+Moira,Public order and security,298.9
+Monash,Crimes against the person,646.1
+Monash,Property and deception,4145.0
+Monash,Drug offences,132.8
+Monash,Public order and security,153.0
+Moonee Valley,Crimes against the person,726.1
+Moonee Valley,Property and deception,4353.0
+Moonee Valley,Drug offences,193.8
+Moonee Valley,Public order and security,192.3
+Moorabool,Crimes against the person,1022.0
+Moorabool,Property and deception,3387.3
+Moorabool,Drug offences,187.4
+Moorabool,Public order and security,223.9
+Mornington Peninsula,Crimes against the person,772.8
+Mornington Peninsula,Property and deception,2813.9
+Mornington Peninsula,Drug offences,186.7
+Mornington Peninsula,Public order and security,158.8
+Mount Alexander,Crimes against the person,707.6
+Mount Alexander,Property and deception,2330.3
+Mount Alexander,Drug offences,325.5
+Mount Alexander,Public order and security,141.5
+Moyne,Crimes against the person,667.9
+Moyne,Property and deception,1302.1
+Moyne,Drug offences,112.2
+Moyne,Public order and security,112.2
+Murrindindi,Crimes against the person,685.2
+Murrindindi,Property and deception,2238.0
+Murrindindi,Drug offences,132.0
+Murrindindi,Public order and security,194.9
+Nillumbik,Crimes against the person,447.4
+Nillumbik,Property and deception,1714.6
+Nillumbik,Drug offences,87.6
+Nillumbik,Public order and security,67.3
+Northern Grampians,Crimes against the person,2373.0
+Northern Grampians,Property and deception,5250.8
+Northern Grampians,Drug offences,488.1
+Northern Grampians,Public order and security,664.8
+Port Phillip,Crimes against the person,1383.4
+Port Phillip,Property and deception,7998.2
+Port Phillip,Drug offences,280.3
+Port Phillip,Public order and security,341.3
+Pyrenees,Crimes against the person,933.6
+Pyrenees,Property and deception,2775.6
+Pyrenees,Drug offences,126.2
+Pyrenees,Public order and security,126.2
+Queenscliffe,Crimes against the person,270.3
+Queenscliffe,Property and deception,729.7
+Queenscliffe,Drug offences,54.1
+Queenscliffe,Public order and security,54.1
+South Gippsland,Crimes against the person,974.5
+South Gippsland,Property and deception,2719.1
+South Gippsland,Drug offences,95.9
+South Gippsland,Public order and security,156.6
+Southern Grampians,Crimes against the person,1437.9
+Southern Grampians,Property and deception,2281.3
+Southern Grampians,Drug offences,376.2
+Southern Grampians,Public order and security,315.5
+Stonnington,Crimes against the person,1009.4
+Stonnington,Property and deception,6935.2
+Stonnington,Drug offences,250.8
+Stonnington,Public order and security,274.2
+Strathbogie,Crimes against the person,693.6
+Strathbogie,Property and deception,2247.9
+Strathbogie,Drug offences,125.3
+Strathbogie,Public order and security,108.6
+Surf Coast,Crimes against the person,512.9
+Surf Coast,Property and deception,1521.4
+Surf Coast,Drug offences,88.3
+Surf Coast,Public order and security,98.2
+Swan Hill,Crimes against the person,1783.3
+Swan Hill,Property and deception,3042.1
+Swan Hill,Drug offences,438.7
+Swan Hill,Public order and security,457.7
+Towong,Crimes against the person,757.2
+Towong,Property and deception,1643.3
+Towong,Drug offences,32.2
+Towong,Public order and security,257.8
+Wangaratta,Crimes against the person,1203.5
+Wangaratta,Property and deception,3176.3
+Wangaratta,Drug offences,371.3
+Wangaratta,Public order and security,328.2
+Warrnambool,Crimes against the person,1478.1
+Warrnambool,Property and deception,2683.5
+Warrnambool,Drug offences,316.4
+Warrnambool,Public order and security,259.1
+Wellington,Crimes against the person,2047.3
+Wellington,Property and deception,4088.1
+Wellington,Drug offences,222.2
+Wellington,Public order and security,446.6
+West Wimmera,Crimes against the person,830.9
+West Wimmera,Property and deception,2466.7
+West Wimmera,Drug offences,441.4
+West Wimmera,Public order and security,285.6
+Whitehorse,Crimes against the person,628.6
+Whitehorse,Property and deception,3456.3
+Whitehorse,Drug offences,123.2
+Whitehorse,Public order and security,123.8
+Whittlesea,Crimes against the person,803.9
+Whittlesea,Property and deception,3240.2
+Whittlesea,Drug offences,152.3
+Whittlesea,Public order and security,145.6
+Wodonga,Crimes against the person,1160.3
+Wodonga,Property and deception,4150.5
+Wodonga,Drug offences,223.2
+Wodonga,Public order and security,267.4
+Wyndham,Crimes against the person,785.4
+Wyndham,Property and deception,3577.8
+Wyndham,Drug offences,114.2
+Wyndham,Public order and security,160.3
+Yarra,Crimes against the person,1568.2
+Yarra,Property and deception,9325.8
+Yarra,Drug offences,343.3
+Yarra,Public order and security,352.1
+Yarra Ranges,Crimes against the person,797.5
+Yarra Ranges,Property and deception,2023.8
+Yarra Ranges,Drug offences,124.6
+Yarra Ranges,Public order and security,119.0
+Yarriambiack,Crimes against the person,1094.7
+Yarriambiack,Property and deception,2728.8
+Yarriambiack,Drug offences,174.5
+Yarriambiack,Public order and security,380.8

@@ -1,0 +1,227 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Share of incidents with no offender identified ('unsolved'), 2017 vs 2026, by offence type.",
+  "data": {
+    "url": "data/charge_status.csv"
+  },
+  "transform": [
+    {
+      "filter": "datum.status == 'Unsolved' && (datum.year == 2017 || datum.year == 2026) && datum.division != 'Other offences'"
+    },
+    {
+      "calculate": "'' + datum.year",
+      "as": "Year"
+    },
+    {
+      "calculate": "datum.year == 2026 ? datum.share : 0",
+      "as": "s26"
+    },
+    {
+      "joinaggregate": [
+        {
+          "op": "sum",
+          "field": "s26",
+          "as": "share_2026"
+        }
+      ],
+      "groupby": [
+        "division"
+      ]
+    }
+  ],
+  "width": "container",
+  "height": {
+    "step": 52
+  },
+  "encoding": {
+    "y": {
+      "field": "division",
+      "type": "nominal",
+      "title": null,
+      "sort": {
+        "field": "share_2026",
+        "order": "descending"
+      },
+      "axis": {
+        "domain": false,
+        "ticks": false,
+        "labelFontSize": 13,
+        "labelFontWeight": 600,
+        "labelPadding": 10
+      }
+    },
+    "x": {
+      "field": "share",
+      "type": "quantitative",
+      "title": "Share of incidents left unsolved",
+      "axis": {
+        "format": ".0%",
+        "values": [
+          0,
+          0.2,
+          0.4,
+          0.6,
+          0.8
+        ]
+      },
+      "scale": {
+        "domain": [
+          0,
+          0.85
+        ]
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "color": "#c9c4b8",
+        "strokeWidth": 5
+      },
+      "encoding": {
+        "detail": {
+          "field": "division"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "circle",
+        "size": 220,
+        "opacity": 1,
+        "stroke": "#ffffff",
+        "strokeWidth": 1.5
+      },
+      "encoding": {
+        "color": {
+          "field": "Year",
+          "type": "nominal",
+          "title": "Year ending June",
+          "scale": {
+            "domain": [
+              "2017",
+              "2026"
+            ],
+            "range": [
+              "#a9a397",
+              "#b3261e"
+            ]
+          },
+          "legend": {
+            "orient": "top",
+            "direction": "horizontal"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "division",
+            "title": "Offence type"
+          },
+          {
+            "field": "year",
+            "title": "Year ending June"
+          },
+          {
+            "field": "incidents",
+            "title": "Unsolved incidents",
+            "format": ","
+          },
+          {
+            "field": "share",
+            "title": "Share unsolved",
+            "format": ".0%"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.year == 2026"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "dy": -17,
+        "fontWeight": 700,
+        "color": "#b3261e",
+        "fontSize": 12
+      },
+      "encoding": {
+        "text": {
+          "field": "share",
+          "format": ".0%"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.year == 2017"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "dy": -17,
+        "color": "#545c6b",
+        "fontSize": 12
+      },
+      "encoding": {
+        "text": {
+          "field": "share",
+          "format": ".0%"
+        }
+      }
+    }
+  ],
+  "config": {
+    "font": "Archivo",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Archivo",
+      "titleFont": "Archivo",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": 600,
+      "labelColor": "#545c6b",
+      "titleColor": "#545c6b",
+      "domainColor": "#c9c4b8",
+      "tickColor": "#c9c4b8",
+      "gridColor": "#ece8df"
+    },
+    "axisQuantitative": {
+      "format": ",.0f"
+    },
+    "legend": {
+      "labelFont": "Archivo",
+      "titleFont": "Archivo",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": 600,
+      "labelColor": "#545c6b",
+      "titleColor": "#1d2433"
+    },
+    "header": {
+      "labelFont": "Archivo",
+      "titleFont": "Archivo",
+      "labelFontSize": 13,
+      "labelFontWeight": 600,
+      "labelColor": "#1d2433"
+    },
+    "text": {
+      "font": "Archivo",
+      "fontSize": 12,
+      "color": "#1d2433"
+    },
+    "title": {
+      "font": "Archivo",
+      "fontSize": 14,
+      "fontWeight": 700,
+      "color": "#1d2433",
+      "anchor": "start"
+    }
+  }
+}

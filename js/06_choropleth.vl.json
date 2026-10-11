@@ -1,0 +1,550 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Crime rate by council, year ending June 2026. Click a council to see its ten-year trend.",
+  "params": [
+    {
+      "name": "pick",
+      "views": [
+        "state_map",
+        "metro_map"
+      ],
+      "select": {
+        "type": "point",
+        "fields": [
+          "lga"
+        ],
+        "on": "click",
+        "clear": false
+      },
+      "value": [
+        {
+          "lga": "Latrobe"
+        }
+      ]
+    }
+  ],
+  "vconcat": [
+    {
+      "hconcat": [
+        {
+          "name": "state_map",
+          "title": "All of Victoria",
+          "width": 470,
+          "height": 330,
+          "data": {
+            "url": "data/vic_lga.topojson",
+            "format": {
+              "type": "topojson",
+              "feature": "lga"
+            }
+          },
+          "transform": [
+            {
+              "calculate": "datum.properties.lga",
+              "as": "lga"
+            },
+            {
+              "lookup": "lga",
+              "from": {
+                "data": {
+                  "url": "data/lga.csv"
+                },
+                "key": "lga",
+                "fields": [
+                  "region",
+                  "incidents",
+                  "rate",
+                  "rate_2017",
+                  "change_pct",
+                  "irsd_score",
+                  "disadvantage",
+                  "bivar",
+                  "metro",
+                  "unsolved_pct"
+                ]
+              }
+            }
+          ],
+          "projection": {
+            "type": "conicEqualArea",
+            "parallels": [
+              -36,
+              -38
+            ],
+            "rotate": [
+              -145,
+              0
+            ]
+          },
+          "mark": {
+            "type": "geoshape",
+            "stroke": "#ffffff",
+            "strokeWidth": 0.6,
+            "cursor": "pointer"
+          },
+          "encoding": {
+            "color": {
+              "field": "rate",
+              "type": "quantitative",
+              "title": "Incidents per 100,000 people",
+              "scale": {
+                "type": "threshold",
+                "domain": [
+                  4000,
+                  5500,
+                  7000,
+                  8500,
+                  10000
+                ],
+                "range": [
+                  "#fdf0e1",
+                  "#f8cfa6",
+                  "#ee9f6e",
+                  "#d9663f",
+                  "#b3261e",
+                  "#6b100b"
+                ]
+              },
+              "legend": {
+                "orient": "top",
+                "direction": "horizontal",
+                "labelOverlap": false,
+                "labelExpr": "isFinite(datum.value) ? format(datum.value / 1000, '.1~f') + 'k' : ''"
+              }
+            },
+            "stroke": {
+              "condition": {
+                "param": "pick",
+                "empty": false,
+                "value": "#1d2433"
+              },
+              "value": "#ffffff"
+            },
+            "strokeWidth": {
+              "condition": {
+                "param": "pick",
+                "empty": false,
+                "value": 2.5
+              },
+              "value": 0.6
+            },
+            "order": {
+              "condition": {
+                "param": "pick",
+                "empty": false,
+                "value": 1
+              },
+              "value": 0
+            },
+            "tooltip": [
+              {
+                "field": "lga",
+                "title": "Council"
+              },
+              {
+                "field": "rate",
+                "title": "Per 100,000 people",
+                "format": ",.0f"
+              },
+              {
+                "field": "incidents",
+                "title": "Incidents (year to June 2026)",
+                "format": ","
+              },
+              {
+                "field": "change_pct",
+                "title": "Change in rate since 2017 (%)",
+                "format": "+.0f"
+              }
+            ]
+          }
+        },
+        {
+          "name": "metro_map",
+          "title": "Zoom: metropolitan Melbourne",
+          "width": 340,
+          "height": 330,
+          "data": {
+            "url": "data/vic_lga.topojson",
+            "format": {
+              "type": "topojson",
+              "feature": "lga"
+            }
+          },
+          "transform": [
+            {
+              "calculate": "datum.properties.lga",
+              "as": "lga"
+            },
+            {
+              "lookup": "lga",
+              "from": {
+                "data": {
+                  "url": "data/lga.csv"
+                },
+                "key": "lga",
+                "fields": [
+                  "region",
+                  "incidents",
+                  "rate",
+                  "rate_2017",
+                  "change_pct",
+                  "irsd_score",
+                  "disadvantage",
+                  "bivar",
+                  "metro",
+                  "unsolved_pct"
+                ]
+              }
+            },
+            {
+              "filter": "datum.metro == 'True' || datum.metro == true"
+            }
+          ],
+          "projection": {
+            "type": "conicEqualArea",
+            "parallels": [
+              -36,
+              -38
+            ],
+            "rotate": [
+              -145,
+              0
+            ]
+          },
+          "mark": {
+            "type": "geoshape",
+            "stroke": "#ffffff",
+            "strokeWidth": 0.6,
+            "cursor": "pointer"
+          },
+          "encoding": {
+            "color": {
+              "field": "rate",
+              "type": "quantitative",
+              "title": "Incidents per 100,000 people",
+              "scale": {
+                "type": "threshold",
+                "domain": [
+                  4000,
+                  5500,
+                  7000,
+                  8500,
+                  10000
+                ],
+                "range": [
+                  "#fdf0e1",
+                  "#f8cfa6",
+                  "#ee9f6e",
+                  "#d9663f",
+                  "#b3261e",
+                  "#6b100b"
+                ]
+              },
+              "legend": {
+                "orient": "top",
+                "direction": "horizontal",
+                "labelOverlap": false,
+                "labelExpr": "isFinite(datum.value) ? format(datum.value / 1000, '.1~f') + 'k' : ''"
+              }
+            },
+            "stroke": {
+              "condition": {
+                "param": "pick",
+                "empty": false,
+                "value": "#1d2433"
+              },
+              "value": "#ffffff"
+            },
+            "strokeWidth": {
+              "condition": {
+                "param": "pick",
+                "empty": false,
+                "value": 2.5
+              },
+              "value": 0.6
+            },
+            "order": {
+              "condition": {
+                "param": "pick",
+                "empty": false,
+                "value": 1
+              },
+              "value": 0
+            },
+            "tooltip": [
+              {
+                "field": "lga",
+                "title": "Council"
+              },
+              {
+                "field": "rate",
+                "title": "Per 100,000 people",
+                "format": ",.0f"
+              },
+              {
+                "field": "incidents",
+                "title": "Incidents (year to June 2026)",
+                "format": ","
+              },
+              {
+                "field": "change_pct",
+                "title": "Change in rate since 2017 (%)",
+                "format": "+.0f"
+              }
+            ]
+          }
+        }
+      ],
+      "spacing": 30,
+      "resolve": {
+        "legend": {
+          "color": "shared"
+        }
+      }
+    },
+    {
+      "title": {
+        "text": {
+          "expr": "'Ten-year trend: ' + (pick.lga ? pick.lga[0] : 'click a council')"
+        },
+        "fontSize": 14
+      },
+      "width": 840,
+      "height": 200,
+      "layer": [
+        {
+          "data": {
+            "url": "data/lga_trend.csv"
+          },
+          "mark": {
+            "type": "line",
+            "color": "#ddd7ca",
+            "strokeWidth": 1
+          },
+          "encoding": {
+            "x": {
+              "field": "year",
+              "type": "ordinal",
+              "title": "Year ending June",
+              "axis": {
+                "labelAngle": 0
+              }
+            },
+            "y": {
+              "field": "rate",
+              "type": "quantitative",
+              "title": "Per 100,000 people",
+              "scale": {
+                "type": "log",
+                "domain": [
+                  1000,
+                  20000
+                ],
+                "nice": false
+              },
+              "axis": {
+                "values": [
+                  1000,
+                  2000,
+                  5000,
+                  10000,
+                  20000
+                ],
+                "format": ","
+              }
+            },
+            "detail": {
+              "field": "lga"
+            }
+          }
+        },
+        {
+          "data": {
+            "url": "data/state_trend.csv"
+          },
+          "layer": [
+            {
+              "mark": {
+                "type": "line",
+                "color": "#1f3a5f",
+                "strokeDash": [
+                  5,
+                  4
+                ],
+                "strokeWidth": 2
+              },
+              "encoding": {
+                "x": {
+                  "field": "year",
+                  "type": "ordinal"
+                },
+                "y": {
+                  "field": "rate",
+                  "type": "quantitative"
+                }
+              }
+            },
+            {
+              "transform": [
+                {
+                  "filter": "datum.year == 2026"
+                }
+              ],
+              "mark": {
+                "type": "text",
+                "align": "left",
+                "dx": 8,
+                "color": "#1f3a5f",
+                "fontWeight": 700
+              },
+              "encoding": {
+                "x": {
+                  "field": "year",
+                  "type": "ordinal"
+                },
+                "y": {
+                  "field": "rate",
+                  "type": "quantitative"
+                },
+                "text": {
+                  "value": "Victoria"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "data": {
+            "url": "data/lga_trend.csv"
+          },
+          "transform": [
+            {
+              "filter": {
+                "param": "pick"
+              }
+            }
+          ],
+          "layer": [
+            {
+              "mark": {
+                "type": "line",
+                "color": "#b3261e",
+                "strokeWidth": 3.5
+              }
+            },
+            {
+              "mark": {
+                "type": "circle",
+                "color": "#b3261e",
+                "size": 50,
+                "opacity": 1
+              },
+              "encoding": {
+                "tooltip": [
+                  {
+                    "field": "lga",
+                    "title": "Council"
+                  },
+                  {
+                    "field": "year",
+                    "title": "Year"
+                  },
+                  {
+                    "field": "rate",
+                    "title": "Per 100,000 people",
+                    "format": ",.0f"
+                  },
+                  {
+                    "field": "incidents",
+                    "title": "Incidents",
+                    "format": ","
+                  }
+                ]
+              }
+            },
+            {
+              "transform": [
+                {
+                  "filter": "datum.year == 2026"
+                }
+              ],
+              "mark": {
+                "type": "text",
+                "align": "left",
+                "dx": 8,
+                "color": "#b3261e",
+                "fontWeight": 700
+              },
+              "encoding": {
+                "text": {
+                  "field": "lga"
+                }
+              }
+            }
+          ],
+          "encoding": {
+            "x": {
+              "field": "year",
+              "type": "ordinal"
+            },
+            "y": {
+              "field": "rate",
+              "type": "quantitative"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "spacing": 28,
+  "config": {
+    "font": "Archivo",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Archivo",
+      "titleFont": "Archivo",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": 600,
+      "labelColor": "#545c6b",
+      "titleColor": "#545c6b",
+      "domainColor": "#c9c4b8",
+      "tickColor": "#c9c4b8",
+      "gridColor": "#ece8df"
+    },
+    "axisQuantitative": {
+      "format": ",.0f"
+    },
+    "legend": {
+      "labelFont": "Archivo",
+      "titleFont": "Archivo",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": 600,
+      "labelColor": "#545c6b",
+      "titleColor": "#1d2433"
+    },
+    "header": {
+      "labelFont": "Archivo",
+      "titleFont": "Archivo",
+      "labelFontSize": 13,
+      "labelFontWeight": 600,
+      "labelColor": "#1d2433"
+    },
+    "text": {
+      "font": "Archivo",
+      "fontSize": 12,
+      "color": "#1d2433"
+    },
+    "title": {
+      "font": "Archivo",
+      "fontSize": 14,
+      "fontWeight": 700,
+      "color": "#1d2433",
+      "anchor": "start"
+    }
+  }
+}
