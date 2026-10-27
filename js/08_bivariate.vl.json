@@ -4,8 +4,8 @@
   "hconcat": [
     {
       "title": "All of Victoria",
-      "width": 430,
-      "height": 320,
+      "width": 360,
+      "height": 300,
       "data": {
         "url": "data/vic_lga.topojson",
         "format": {
@@ -105,8 +105,8 @@
     },
     {
       "title": "Zoom: metropolitan Melbourne",
-      "width": 300,
-      "height": 320,
+      "width": 460,
+      "height": 400,
       "data": {
         "url": "data/vic_lga.topojson",
         "format": {

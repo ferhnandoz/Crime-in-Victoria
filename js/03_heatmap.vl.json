@@ -84,14 +84,20 @@
           ],
           "scale": {
             "domain": [
-              50,
-              100,
+              40,
+              64,
+              88,
+              112,
+              136,
               160
             ],
             "range": [
-              "#2c5a8c",
-              "#f4f1ea",
-              "#b3261e"
+              "#fdf0e1",
+              "#f8cfa6",
+              "#ee9f6e",
+              "#d9663f",
+              "#b3261e",
+              "#6b100b"
             ],
             "clamp": true,
             "interpolate": "lab"
@@ -101,8 +107,8 @@
             "gradientLength": 260,
             "direction": "horizontal",
             "values": [
-              50,
-              75,
+              40,
+              70,
               100,
               130,
               160
@@ -149,7 +155,7 @@
         },
         "color": {
           "condition": {
-            "test": "datum.index > 135 || datum.index < 65",
+            "test": "datum.index >= 115",
             "value": "#ffffff"
           },
           "value": "#1d2433"

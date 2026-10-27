@@ -29,8 +29,8 @@
         {
           "name": "state_map",
           "title": "All of Victoria",
-          "width": 470,
-          "height": 330,
+          "width": 440,
+          "height": 300,
           "data": {
             "url": "data/vic_lga.topojson",
             "format": {
@@ -162,8 +162,8 @@
         {
           "name": "metro_map",
           "title": "Zoom: metropolitan Melbourne",
-          "width": 340,
-          "height": 330,
+          "width": 545,
+          "height": 440,
           "data": {
             "url": "data/vic_lga.topojson",
             "format": {
