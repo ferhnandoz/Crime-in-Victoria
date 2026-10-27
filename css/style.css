@@ -34,7 +34,7 @@ body {
 .hero {
   background: var(--navy);
   color: #fff;
-  padding: 72px var(--gutter) 56px;
+  padding: 40px var(--gutter) 32px; /* was 72px top, 56px bottom: shorter header */
 }
 .hero .wrap { max-width: var(--max); margin: 0 auto; }
 .kicker {
@@ -50,13 +50,13 @@ body {
   font-family: "Archivo", Arial, sans-serif;
   font-stretch: 85%;
   font-weight: 800;
-  font-size: clamp(40px, 6vw, 72px);
+  font-size: clamp(32px, 4vw, 48px); /* was up to 72px */
   line-height: 1.02;
-  margin: 0 0 20px;
-  max-width: 14ch;
+  margin: 0 0 12px;
+  max-width: none; /* was 14ch: title now fits on one line */
 }
 .hero .dek {
-  font-size: 21px;
+  font-size: 18px; /* was 21px */
   line-height: 1.5;
   max-width: 62ch;
   color: #dfe6f0;
@@ -66,7 +66,7 @@ body {
   font-family: "Archivo", Arial, sans-serif;
   font-size: 14px;
   color: #b9c4d4;
-  margin-top: 28px;
+  margin-top: 16px; /* was 28px */
 }
 
 /* Key numbers strip under the hero */
@@ -75,14 +75,14 @@ body {
   grid-template-columns: repeat(4, 1fr);
   gap: var(--gutter);
   max-width: var(--max);
-  margin: 40px auto 0;
+  margin: 24px auto 0; /* was 40px */
   border-top: 1px solid rgba(255,255,255,.25);
-  padding-top: 24px;
+  padding-top: 16px; /* was 24px */
 }
 .stat .num {
   font-family: "Archivo", Arial, sans-serif;
   font-weight: 800;
-  font-size: 40px;
+  font-size: 32px; /* was 40px */
   line-height: 1;
   display: block;
 }
