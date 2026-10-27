@@ -73,22 +73,22 @@
         "order": "descending"
       },
       "header": {
-        "labelFontSize": 13,
-        "labelLimit": 260
+        "labelFontSize": 15,
+        "labelLimit": 300
       }
     }
   },
-  "spacing": 36,
+  "spacing": 60,
   "spec": {
     "width": {
-      "step": 17
+      "step": 30
     },
     "height": {
-      "step": 17
+      "step": 30
     },
     "mark": {
       "type": "square",
-      "size": 210,
+      "size": 700,
       "opacity": 1
     },
     "encoding": {
