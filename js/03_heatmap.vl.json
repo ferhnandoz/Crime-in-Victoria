@@ -93,7 +93,8 @@
               "#f4f1ea",
               "#b3261e"
             ],
-            "clamp": true
+            "clamp": true,
+            "interpolate": "lab"
           },
           "legend": {
             "orient": "bottom",
