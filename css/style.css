@@ -155,6 +155,8 @@ strong { font-weight: 700; color: var(--ink); }
   border-radius: 4px;
   padding: 22px 22px 14px;
   min-width: 0;            /* lets Vega charts shrink inside grid */
+  display: flex;           /* stack title, chart and note vertically... */
+  flex-direction: column;
 }
 .panel .sub {
   font-family: "Archivo", Arial, sans-serif;
@@ -169,6 +171,9 @@ strong { font-weight: 700; color: var(--ink); }
 .text-panel p { font-size: 17px; }
 
 .vis { width: 100%; }
+/* ...and let the chart area take any spare height, so source notes in
+   side-by-side panels sit at the same level at the bottom of each panel */
+.panel .vis { flex: 1 0 auto; }
 .vis .vega-embed { width: 100%; }
 .vis .vega-embed summary { opacity: .35; }
 
